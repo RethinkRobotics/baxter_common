@@ -32,4 +32,17 @@ nosetests.xml
 # Mr Developer
 .mr.developer.cfg
 .project
+.cproject
 .pydevproject
+.pydevproject
+*.swp
+.svn
+Makefile.rr
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+CATKIN_IGNORE
+catkin
+catkin_generated
+devel
+test_results
