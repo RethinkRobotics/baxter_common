@@ -1146,16 +1146,6 @@
     </actuator>
   </transmission>
 
-  <!-- Right Gripper -->
-  <transmission name="right_tran8">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_gripper_l_finger_joint"/>
-    <actuator name="right_motor8">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-
   <!-- Left Arm -->
   <transmission name="left_tran1">
     <type>transmission_interface/SimpleTransmission</type>
