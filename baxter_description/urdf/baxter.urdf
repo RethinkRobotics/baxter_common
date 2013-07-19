@@ -636,7 +636,6 @@
     <child link="right_upper_forearm_visual"/>
   </joint>
   <joint name="right_w0_to_itb_fixed" type="fixed">
-    <!-- <origin xyz="-0.0565 0 0.1301" rpy="-${PI_DIV_2} 0 ${PI_DIV_2}" /> -->
     <origin rpy="-1.57079632679 0 1.57079632679" xyz="-0.0565 0 0.12"/>
     <axis xyz="0 0 1"/>
     <parent link="right_upper_forearm"/>
@@ -1038,7 +1037,6 @@
     <child link="left_upper_forearm_visual"/>
   </joint>
   <joint name="left_w0_to_itb_fixed" type="fixed">
-    <!-- <origin xyz="-0.0565 0 0.1301" rpy="-${PI_DIV_2} 0 ${PI_DIV_2}" /> -->
     <origin rpy="-1.57079632679 0 1.57079632679" xyz="-0.0565 0 0.12"/>
     <axis xyz="0 0 1"/>
     <parent link="left_upper_forearm"/>
