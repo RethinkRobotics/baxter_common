@@ -5,11 +5,6 @@
 <!-- =================================================================================== -->
 <robot name="baxter">
   <link name="base">
-    <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
-    </inertial>
   </link>
   <link name="torso">
     <visual>
