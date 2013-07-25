@@ -1199,6 +1199,17 @@
     </actuator>
   </transmission>
 
+  <!-- Head -->
+  <transmission name="head1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="head_pan"/>
+    <actuator name="head_motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
   <!-- ros_control plugin -->
   <gazebo>
     <plugin name="ros_control" filename="libgazebo_ros_control.so">
