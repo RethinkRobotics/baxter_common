@@ -157,6 +157,21 @@
       <inertia ixx="0.004006" ixy="0.000230" ixz="0.000002" iyy="0.002800" iyz="0.000029" izz="0.001509"/>
     </inertial>
   </link>
+
+  <link name="screen_visual">
+    <visual>
+      <origin rpy="0.261666667 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.218 0.16 0.001" />
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.004006" ixy="0.000230" ixz="0.000002" iyy="0.002800" iyz="0.000029" izz="0.001509"/>
+    </inertial>
+  </link>
+
   <link name="head_camera">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -266,6 +281,11 @@
     <origin rpy="1.9198622 0.0 1.57079632679" xyz=".088 0.0 0.0"/>
     <parent link="head"/>
     <child link="screen"/>
+  </joint>
+  <joint name="screen_visual_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 -0.016 0.0"/>
+    <parent link="screen"/>
+    <child link="screen_visual"/>
   </joint>
   <joint name="head_camera" type="fixed">
     <origin rpy="1.9198622 0.0 1.57079632679" xyz="0.12839 0.0 0.06368"/>
@@ -1209,7 +1229,6 @@
     </actuator>
   </transmission>
 
-
   <!-- ros_control plugin -->
   <gazebo>
     <plugin name="ros_control" filename="libgazebo_ros_control.so">
@@ -1219,6 +1238,16 @@
 
   <gazebo reference="torso">
     <selfCollide>false</selfCollide>
+  </gazebo>
+
+  <gazebo reference="screen_visual">
+    <visual>
+      <plugin name="screen_video_controller" filename="libgazebo_ros_video.so">
+	<height>600</height>
+	<width>1024</width>
+	<topicName>/sdk/xdisplay</topicName>
+      </plugin>
+    </visual>
   </gazebo>
 
 </robot>
