@@ -10,17 +10,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <!-- <box size="0.2 0.35 0.4" /> -->
         <mesh filename="package://baxter_description/meshes/torso/base_link.DAE"/>
       </geometry>
-      <material name="darkgray">
-        <color rgba=".2 .2 .2 1"/>
-      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="-0.065 0 0.0"/>
       <geometry>
-        <cylinder length="0.7" radius="0.27"/>
+        <mesh filename="package://baxter_description/meshes/torso/base_link_collision.STL"/>
       </geometry>
     </collision>
     <inertial>
@@ -1238,7 +1234,7 @@
 
   <!-- Gazebo-Specific Link Properties -->
   <gazebo reference="torso">
-    <selfCollide>false</selfCollide>
+    <selfCollide>true</selfCollide>
   </gazebo>
 
   <!-- Video on Baxter's Screen -->
