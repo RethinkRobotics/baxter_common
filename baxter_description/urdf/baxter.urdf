@@ -1236,10 +1236,12 @@
     </plugin>
   </gazebo>
 
+  <!-- Gazebo-Specific Link Properties -->
   <gazebo reference="torso">
     <selfCollide>false</selfCollide>
   </gazebo>
 
+  <!-- Video on Baxter's Screen -->
   <gazebo reference="screen_visual">
     <visual>
       <plugin name="screen_video_controller" filename="libgazebo_ros_video.so">
