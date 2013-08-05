@@ -1232,11 +1232,6 @@
     </plugin>
   </gazebo>
 
-  <!-- Gazebo-Specific Link Properties -->
-  <gazebo reference="torso">
-    <selfCollide>true</selfCollide>
-  </gazebo>
-
   <!-- Video on Baxter's Screen -->
   <gazebo reference="screen_visual">
     <visual>
@@ -1246,6 +1241,56 @@
 	<topicName>/sdk/xdisplay</topicName>
       </plugin>
     </visual>
+  </gazebo>
+
+  <!-- Gazebo-Specific Link Properties -->
+  <gazebo reference="torso">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="head_pan">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_s0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_s1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_e0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_e1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_w0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_w1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_w2">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_s0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_s1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_e0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_e1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_w0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_w1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_w2">
+    <cfmDamping>1</cfmDamping>
   </gazebo>
 
 </robot>
