@@ -2,8 +2,8 @@
 <package>
   <name>baxter_common</name>
   <version>0.6.1</version>
-  <description>URDF and meshes describing the Baxter robot from Rethink
-    Robotics.
+  <description>URDF, meshes, and custom messages
+    describing the Baxter robot from Rethink Robotics.
   </description>
 
   <maintainer email="rsdk.support@rethinkrobotics.com">
@@ -22,6 +22,7 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <run_depend>baxter_description</run_depend>
+  <run_depend>baxter_msgs</run_depend>
 
   <export>
     <metapackage/>
