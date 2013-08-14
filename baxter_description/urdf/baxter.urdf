@@ -5,6 +5,18 @@
 <!-- =================================================================================== -->
 <robot name="baxter">
   <link name="base">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://baxter_description/meshes/base/PEDESTAL.DAE"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://baxter_description/meshes/base/pedestal_link_collision.DAE"/>
+      </geometry>
+    </collision>
   </link>
   <link name="torso">
     <visual>
