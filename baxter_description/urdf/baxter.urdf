@@ -1227,8 +1227,8 @@
 
   <!-- ros_control plugin -->
   <gazebo>
-    <plugin name="ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/baxter</robotNamespace>
+    <plugin name="baxter_ros_control" filename="libbaxter_gazebo_ros_control.so">
+      <robotNamespace>/robot</robotNamespace>
     </plugin>
   </gazebo>
 
