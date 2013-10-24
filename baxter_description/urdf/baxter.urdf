@@ -1212,17 +1212,6 @@
     </plugin>
   </gazebo>
 
-  <!-- Video on Baxter's Screen -->
-  <gazebo reference="screen_visual">
-    <visual>
-      <plugin name="screen_video_controller" filename="libgazebo_ros_video.so">
-	<height>600</height>
-	<width>1024</width>
-	<topicName>/sdk/xdisplay</topicName>
-      </plugin>
-    </visual>
-  </gazebo>
-
   <!-- Gazebo-Specific Link Properties -->
   <gazebo reference="torso">
     <selfCollide>true</selfCollide>
