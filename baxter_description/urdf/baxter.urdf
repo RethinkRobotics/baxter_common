@@ -5,27 +5,18 @@
 <!-- =================================================================================== -->
 <robot name="baxter">
   <link name="base">
-    <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
-    </inertial>
   </link>
   <link name="torso">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <!-- <box size="0.2 0.35 0.4" /> -->
         <mesh filename="package://baxter_description/meshes/torso/base_link.DAE"/>
       </geometry>
-      <material name="darkgray">
-        <color rgba=".2 .2 .2 1"/>
-      </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.065 0 0.0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <cylinder length="0.7" radius="0.27"/>
+        <mesh filename="package://baxter_description/meshes/torso/base_link_collision.DAE"/>
       </geometry>
     </collision>
     <inertial>
@@ -83,9 +74,9 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.04 0 -0.775"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <box size="0.92 0.83 0.3"/>
+        <mesh filename="package://baxter_description/meshes/base/pedestal_link_collision.DAE"/>
       </geometry>
     </collision>
     <inertial>
@@ -1085,5 +1076,191 @@
     <parent link="left_hand"/>
     <child link="left_gripper"/>
   </joint>
+
+  <!-- Transmissions -->
+
+  <!-- Right Arm -->
+  <transmission name="right_tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_s0"/>
+    <actuator name="right_motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_s1"/>
+    <actuator name="right_motor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_e0"/>
+    <actuator name="right_motor3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_e1"/>
+    <actuator name="right_motor4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_w0"/>
+    <actuator name="right_motor5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_w1"/>
+    <actuator name="right_motor6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_w2"/>
+    <actuator name="right_motor7">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- Left Arm -->
+  <transmission name="left_tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_s0"/>
+    <actuator name="left_motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_s1"/>
+    <actuator name="left_motor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_e0"/>
+    <actuator name="left_motor3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_e1"/>
+    <actuator name="left_motor4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_w0"/>
+    <actuator name="left_motor5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_w1"/>
+    <actuator name="left_motor6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_w2"/>
+    <actuator name="left_motor7">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- Head -->
+  <transmission name="head1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="head_pan"/>
+    <actuator name="head_motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="baxter_ros_control" filename="libbaxter_gazebo_ros_control.so">
+      <robotNamespace>/robot</robotNamespace>
+    </plugin>
+  </gazebo>
+
+  <!-- Gazebo-Specific Link Properties -->
+  <gazebo reference="torso">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="head_pan">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_s0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_s1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_e0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_e1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_w0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_w1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_w2">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_s0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_s1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_e0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_e1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_w0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_w1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_w2">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+
 </robot>
 
