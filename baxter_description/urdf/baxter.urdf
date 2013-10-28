@@ -669,6 +669,7 @@
     <axis xyz="0 0 1"/>
     <parent link="right_wrist"/>
     <child link="right_hand"/>
+    <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="right_hand_camera" type="fixed">
     <origin rpy="0 0 -1.57079633" xyz="0.03825 0.012 0.015355"/>
