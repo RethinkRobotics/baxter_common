@@ -1,4 +1,4 @@
 geometry_msgs/PoseStamped[] pose_stamp
 ---
-JointPositions[] joints
+sensor_msgs/JointState[] joints
 bool[] isValid
