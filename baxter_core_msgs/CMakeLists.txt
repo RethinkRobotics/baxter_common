@@ -31,7 +31,6 @@ add_message_files(DIRECTORY msg FILES
   ITBState.msg
   ITBStates.msg
   JointCommand.msg
-  JointPositions.msg
   NavigatorState.msg
   NavigatorStates.msg
   RobustControllerStatus.msg
