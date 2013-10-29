@@ -3,8 +3,9 @@ project(baxter_core_msgs)
 
 find_package(catkin REQUIRED
   message_generation
-  std_msgs
   geometry_msgs
+  sensor_msgs
+  std_msgs
 )
 
 add_message_files(DIRECTORY msg FILES
@@ -30,7 +31,6 @@ add_message_files(DIRECTORY msg FILES
   ITBState.msg
   ITBStates.msg
   JointCommand.msg
-  JointPositions.msg
   NavigatorState.msg
   NavigatorStates.msg
   RobustControllerStatus.msg
@@ -45,12 +45,14 @@ add_service_files(DIRECTORY srv FILES
 )
 
 generate_messages(DEPENDENCIES
-  std_msgs
   geometry_msgs
+  sensor_msgs
+  std_msgs
 )
 
 catkin_package(CATKIN_DEPENDS
   message_runtime
-  std_msgs
   geometry_msgs
+  sensor_msgs
+  std_msgs
 )
