@@ -87,7 +87,7 @@
   </link>
   <link name="head">
     <visual>
-      <origin rpy="0 0 0" xyz="-.03477 0 .00953"/>
+      <origin rpy="0 0 0" xyz="0 0 .00953"/>
       <geometry>
         <!-- <cylinder length="0.04" radius="0.09"/> -->
         <mesh filename="package://baxter_description/meshes/head/H0.DAE"/>
@@ -251,7 +251,7 @@
     <child link="pedestal"/>
   </joint>
   <joint name="head_pan" type="revolute">
-    <origin rpy="0 0 0" xyz="0.0947 0 0.686"/>
+    <origin rpy="0 0 0" xyz="0.06 0 0.686"/>
     <axis xyz="0 0 1"/>
     <parent link="torso"/>
     <child link="head"/>
@@ -259,12 +259,12 @@
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="head_nod" type="fixed">
-    <origin rpy="1.9198622 0.0 1.57079632679" xyz=".088 0.0 0.0"/>
+    <origin rpy="1.75057 0 1.57079632679" xyz=".1227 0 0"/>
     <parent link="head"/>
     <child link="screen"/>
   </joint>
   <joint name="head_camera" type="fixed">
-    <origin rpy="1.9198622 0.0 1.57079632679" xyz="0.12839 0.0 0.06368"/>
+    <origin rpy="1.75057 0 1.57079632679" xyz="0.12839 0 0.06368"/>
     <parent link="head"/>
     <child link="head_camera"/>
   </joint>
