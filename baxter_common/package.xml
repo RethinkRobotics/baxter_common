@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>baxter_common</name>
-  <version>0.6.1</version>
+  <version>0.7.0</version>
   <description>URDF, meshes, and custom messages
     describing the Baxter robot from Rethink Robotics.
   </description>
