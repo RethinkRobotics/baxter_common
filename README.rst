@@ -1,7 +1,7 @@
 baxter_common
 ==============
 
-URDF, meshes, and custom messages describing the Baxter robot from Rethink Robotics
+URDF, meshes, and custom messages describing the Baxter Research Robot from Rethink Robotics
 
 Code & Tickets
 --------------
