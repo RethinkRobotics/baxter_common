@@ -48,3 +48,8 @@ Other Baxter Repositories
 +------------------+-----------------------------------------------------+
 | baxter_examples  | https://github.com/RethinkRobotics/baxter_examples  |
 +------------------+-----------------------------------------------------+
+
+Latest Release Information
+--------------------------
+
+https://github.com/RethinkRobotics/sdk-docs/wiki/Release-Changes
