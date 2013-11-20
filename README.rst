@@ -1,0 +1,50 @@
+baxter_common
+==============
+
+URDF, meshes, and custom messages describing the Baxter robot from Rethink Robotics
+
+Code & Tickets
+--------------
+
++-----------------+----------------------------------------------------------------+
+| Documentation   | https://github.com/RethinkRobotics/sdk-docs/wiki               |
++-----------------+----------------------------------------------------------------+
+| Issues          | https://github.com/RethinkRobotics/baxter_common/issues        |
++-----------------+----------------------------------------------------------------+
+| Contributions   | https://github.com/RethinkRobotics/sdk-docs/wiki/Contributions |
++-----------------+----------------------------------------------------------------+
+
+baxter_common Repository Overview
+---------------------------------
+
+::
+
+     .
+     |
+     +-- baxter_common/           baxter_common metapackage containing all baxter_common packages
+     |
+     +-- baxter_description/      urdf and meshes describing baxter
+     |   +-- urdf/
+     |   +-- meshes/
+     |
+     +-- baxter_core_msgs/        messages and services for communication with baxter
+     |   +-- msgs/
+     |   +-- srvs/
+     |
+     +-- baxter_maintenance_msgs/ messages and services for baxter maintenance routines
+     |   +-- msgs/
+     |   +-- srvs/
+
+
+Other Baxter Repositories
+-------------------------
+
++------------------+-----------------------------------------------------+
+| baxter           | https://github.com/RethinkRobotics/baxter           |
++------------------+-----------------------------------------------------+
+| baxter_interface | https://github.com/RethinkRobotics/baxter_interface |
++------------------+-----------------------------------------------------+
+| baxter_tools     | https://github.com/RethinkRobotics/baxter_tools     |
++------------------+-----------------------------------------------------+
+| baxter_examples  | https://github.com/RethinkRobotics/baxter_examples  |
++------------------+-----------------------------------------------------+
