@@ -21,7 +21,7 @@ baxter_common Repository Overview
 
      .
      |
-     +-- baxter_common/           baxter_common metapackage containing all baxter_common packages
+     +-- baxter_common/           baxter_common metapackage containing baxter_common packages
      |
      +-- baxter_description/      urdf and meshes describing baxter
      |   +-- urdf/
