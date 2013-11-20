@@ -9,7 +9,7 @@
     Rethink Robotics Inc.
   </maintainer>
   <license>BSD</license>
-  <url type="website">http://www.rethinkrobotics.com</url>
+  <url type="website">http://www.rethinkrobotics.com/sdk</url>
   <url type="repository">
     https://github.com/RethinkRobotics/baxter_common
   </url>
