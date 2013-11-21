@@ -1,0 +1,4 @@
+geometry_msgs/PoseStamped[] pose_stamp
+---
+sensor_msgs/JointState[] joints
+bool[] isValid

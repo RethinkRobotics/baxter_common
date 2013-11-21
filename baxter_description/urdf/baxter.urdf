@@ -5,27 +5,18 @@
 <!-- =================================================================================== -->
 <robot name="baxter">
   <link name="base">
-    <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
-    </inertial>
   </link>
   <link name="torso">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <!-- <box size="0.2 0.35 0.4" /> -->
         <mesh filename="package://baxter_description/meshes/torso/base_link.DAE"/>
       </geometry>
-      <material name="darkgray">
-        <color rgba=".2 .2 .2 1"/>
-      </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.065 0 0.0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <cylinder length="0.7" radius="0.27"/>
+        <mesh filename="package://baxter_description/meshes/torso/base_link_collision.DAE"/>
       </geometry>
     </collision>
     <inertial>
@@ -49,8 +40,8 @@
          -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="right_torso_itb">
@@ -68,8 +59,8 @@
          -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="pedestal">
@@ -83,9 +74,9 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.04 0 -0.775"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <box size="0.92 0.83 0.3"/>
+        <mesh filename="package://baxter_description/meshes/base/pedestal_link_collision.DAE"/>
       </geometry>
     </collision>
     <inertial>
@@ -96,7 +87,7 @@
   </link>
   <link name="head">
     <visual>
-      <origin rpy="0 0 0" xyz="-.03477 0 .00953"/>
+      <origin rpy="0 0 0" xyz="0 0 .00953"/>
       <geometry>
         <!-- <cylinder length="0.04" radius="0.09"/> -->
         <mesh filename="package://baxter_description/meshes/head/H0.DAE"/>
@@ -135,8 +126,8 @@
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="screen">
@@ -165,15 +156,15 @@
   <link name="head_camera">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="dummyhead1">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="collision_head_link_1">
@@ -195,8 +186,8 @@
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="collision_head_link_2">
@@ -219,8 +210,8 @@
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <joint name="collision_head_1" type="fixed">
@@ -260,7 +251,7 @@
     <child link="pedestal"/>
   </joint>
   <joint name="head_pan" type="revolute">
-    <origin rpy="0 0 0" xyz="0.0947 0 0.686"/>
+    <origin rpy="0 0 0" xyz="0.06 0 0.686"/>
     <axis xyz="0 0 1"/>
     <parent link="torso"/>
     <child link="head"/>
@@ -268,12 +259,12 @@
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="head_nod" type="fixed">
-    <origin rpy="1.9198622 0.0 1.57079632679" xyz=".088 0.0 0.0"/>
+    <origin rpy="1.75057 0 1.57079632679" xyz=".1227 0 0"/>
     <parent link="head"/>
     <child link="screen"/>
   </joint>
   <joint name="head_camera" type="fixed">
-    <origin rpy="1.9198622 0.0 1.57079632679" xyz="0.12839 0.0 0.06368"/>
+    <origin rpy="1.75057 0 1.57079632679" xyz="0.12839 0 0.06368"/>
     <parent link="head"/>
     <child link="head_camera"/>
   </joint>
@@ -287,8 +278,8 @@
     <!-- all defaults -->
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="right_upper_shoulder">
@@ -366,8 +357,8 @@
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="right_lower_elbow">
@@ -423,8 +414,8 @@
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="right_arm_itb">
@@ -442,8 +433,8 @@
          -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="right_lower_forearm">
@@ -526,8 +517,8 @@
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="right_hand_camera_axis">
@@ -542,8 +533,8 @@
       </visual-->
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="right_hand_range">
@@ -558,11 +549,11 @@
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
-  <link name="right_gripper">
+  <link name="right_gripper_base">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.02"/>
       <geometry>
@@ -574,8 +565,24 @@
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
+    </inertial>
+  </link>
+  <link name="right_gripper">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <joint name="right_torso_arm_mount" type="fixed">
@@ -588,7 +595,7 @@
     <axis xyz="0 0 1"/>
     <parent link="right_arm_mount"/>
     <child link="right_upper_shoulder"/>
-    <limit effort="60.0" lower="-1.70167993878" upper="1.70167993878" velocity="2.5"/>
+    <limit effort="50.0" lower="-1.70167993878" upper="1.70167993878" velocity="1.5"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="right_s1" type="revolute">
@@ -596,7 +603,7 @@
     <axis xyz="0 0 1"/>
     <parent link="right_upper_shoulder"/>
     <child link="right_lower_shoulder"/>
-    <limit effort="60.0" lower="-2.147" upper="1.047" velocity="2.5"/>
+    <limit effort="50.0" lower="-2.147" upper="1.047" velocity="1.5"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="right_e0" type="revolute">
@@ -604,7 +611,7 @@
     <axis xyz="0 0 1"/>
     <parent link="right_lower_shoulder"/>
     <child link="right_upper_elbow"/>
-    <limit effort="60.0" lower="-3.05417993878" upper="3.05417993878" velocity="2.5"/>
+    <limit effort="50.0" lower="-3.05417993878" upper="3.05417993878" velocity="1.5"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="right_e0_fixed" type="fixed">
@@ -618,7 +625,7 @@
     <axis xyz="0 0 1"/>
     <parent link="right_upper_elbow"/>
     <child link="right_lower_elbow"/>
-    <limit effort="60.0" lower="-0.05" upper="2.618" velocity="2.5"/>
+    <limit effort="50.0" lower="-0.05" upper="2.618" velocity="1.5"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="right_w0" type="revolute">
@@ -626,7 +633,7 @@
     <axis xyz="0 0 1"/>
     <parent link="right_lower_elbow"/>
     <child link="right_upper_forearm"/>
-    <limit effort="20.0" lower="-3.059" upper="3.059" velocity="5.0"/>
+    <limit effort="15.0" lower="-3.059" upper="3.059" velocity="4.0"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="right_w0_fixed" type="fixed">
@@ -646,7 +653,7 @@
     <axis xyz="0 0 1"/>
     <parent link="right_upper_forearm"/>
     <child link="right_lower_forearm"/>
-    <limit effort="20.0" lower="-1.57079632679" upper="2.094" velocity="5.0"/>
+    <limit effort="15.0" lower="-1.57079632679" upper="2.094" velocity="4.0"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="right_w2" type="revolute">
@@ -654,7 +661,7 @@
     <axis xyz="0 0 1"/>
     <parent link="right_lower_forearm"/>
     <child link="right_wrist"/>
-    <limit effort="20.0" lower="-3.059" upper="3.059" velocity="5.0"/>
+    <limit effort="15.0" lower="-3.059" upper="3.059" velocity="4.0"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="right_hand" type="fixed">
@@ -679,17 +686,22 @@
     <parent link="right_hand"/>
     <child link="right_hand_range"/>
   </joint>
-  <joint name="right_endpoint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.0 0 0.05"/>
+  <joint name="right_gripper_base" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="right_hand"/>
+    <child link="right_gripper_base"/>
+  </joint>
+  <joint name="right_endpoint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 0 0.025"/>
+    <parent link="right_gripper_base"/>
     <child link="right_gripper"/>
   </joint>
   <link name="left_arm_mount">
     <!-- all defaults -->
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="left_upper_shoulder">
@@ -767,8 +779,8 @@
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="left_lower_elbow">
@@ -824,8 +836,8 @@
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="left_arm_itb">
@@ -843,8 +855,8 @@
          -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="left_lower_forearm">
@@ -927,8 +939,8 @@
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="left_hand_camera_axis">
@@ -943,8 +955,8 @@
       </visual-->
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="left_hand_range">
@@ -959,11 +971,11 @@
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
-  <link name="left_gripper">
+  <link name="left_gripper_base">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.02"/>
       <geometry>
@@ -975,8 +987,24 @@
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
+    </inertial>
+  </link>
+  <link name="left_gripper">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <joint name="left_torso_arm_mount" type="fixed">
@@ -989,7 +1017,7 @@
     <axis xyz="0 0 1"/>
     <parent link="left_arm_mount"/>
     <child link="left_upper_shoulder"/>
-    <limit effort="60.0" lower="-1.70167993878" upper="1.70167993878" velocity="2.5"/>
+    <limit effort="50.0" lower="-1.70167993878" upper="1.70167993878" velocity="1.5"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="left_s1" type="revolute">
@@ -997,7 +1025,7 @@
     <axis xyz="0 0 1"/>
     <parent link="left_upper_shoulder"/>
     <child link="left_lower_shoulder"/>
-    <limit effort="60.0" lower="-2.147" upper="1.047" velocity="2.5"/>
+    <limit effort="50.0" lower="-2.147" upper="1.047" velocity="1.5"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="left_e0" type="revolute">
@@ -1005,7 +1033,7 @@
     <axis xyz="0 0 1"/>
     <parent link="left_lower_shoulder"/>
     <child link="left_upper_elbow"/>
-    <limit effort="60.0" lower="-3.05417993878" upper="3.05417993878" velocity="2.5"/>
+    <limit effort="50.0" lower="-3.05417993878" upper="3.05417993878" velocity="1.5"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="left_e0_fixed" type="fixed">
@@ -1019,7 +1047,7 @@
     <axis xyz="0 0 1"/>
     <parent link="left_upper_elbow"/>
     <child link="left_lower_elbow"/>
-    <limit effort="60.0" lower="-0.05" upper="2.618" velocity="2.5"/>
+    <limit effort="50.0" lower="-0.05" upper="2.618" velocity="1.5"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="left_w0" type="revolute">
@@ -1027,7 +1055,7 @@
     <axis xyz="0 0 1"/>
     <parent link="left_lower_elbow"/>
     <child link="left_upper_forearm"/>
-    <limit effort="20.0" lower="-3.059" upper="3.059" velocity="5.0"/>
+    <limit effort="15.0" lower="-3.059" upper="3.059" velocity="4.0"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="left_w0_fixed" type="fixed">
@@ -1047,7 +1075,7 @@
     <axis xyz="0 0 1"/>
     <parent link="left_upper_forearm"/>
     <child link="left_lower_forearm"/>
-    <limit effort="20.0" lower="-1.57079632679" upper="2.094" velocity="5.0"/>
+    <limit effort="15.0" lower="-1.57079632679" upper="2.094" velocity="4.0"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="left_w2" type="revolute">
@@ -1055,7 +1083,7 @@
     <axis xyz="0 0 1"/>
     <parent link="left_lower_forearm"/>
     <child link="left_wrist"/>
-    <limit effort="20.0" lower="-3.059" upper="3.059" velocity="5.0"/>
+    <limit effort="15.0" lower="-3.059" upper="3.059" velocity="4.0"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="left_hand" type="fixed">
@@ -1080,10 +1108,201 @@
     <parent link="left_hand"/>
     <child link="left_hand_range"/>
   </joint>
-  <joint name="left_endpoint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.0 0 0.05"/>
+  <joint name="left_gripper_base" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="left_hand"/>
+    <child link="left_gripper_base"/>
+  </joint>
+  <joint name="left_endpoint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 0 0.025"/>
+    <parent link="left_gripper_base"/>
     <child link="left_gripper"/>
   </joint>
+
+  <!-- Transmissions -->
+
+  <!-- Right Arm -->
+  <transmission name="right_tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_s0"/>
+    <actuator name="right_motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_s1"/>
+    <actuator name="right_motor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_e0"/>
+    <actuator name="right_motor3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_e1"/>
+    <actuator name="right_motor4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_w0"/>
+    <actuator name="right_motor5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_w1"/>
+    <actuator name="right_motor6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_tran7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_w2"/>
+    <actuator name="right_motor7">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- Left Arm -->
+  <transmission name="left_tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_s0"/>
+    <actuator name="left_motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_s1"/>
+    <actuator name="left_motor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_e0"/>
+    <actuator name="left_motor3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_e1"/>
+    <actuator name="left_motor4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_w0"/>
+    <actuator name="left_motor5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_w1"/>
+    <actuator name="left_motor6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="left_tran7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_w2"/>
+    <actuator name="left_motor7">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- Head -->
+  <transmission name="head1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="head_pan"/>
+    <actuator name="head_motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="baxter_ros_control" filename="libbaxter_gazebo_ros_control.so">
+      <robotNamespace>/robot</robotNamespace>
+    </plugin>
+  </gazebo>
+
+  <!-- Gazebo-Specific Link Properties -->
+  <gazebo reference="torso">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="head_pan">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_s0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_s1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_e0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_e1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_w0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_w1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="right_w2">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_s0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_s1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_e0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_e1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_w0">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_w1">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+  <gazebo reference="left_w2">
+    <cfmDamping>1</cfmDamping>
+  </gazebo>
+
 </robot>
 

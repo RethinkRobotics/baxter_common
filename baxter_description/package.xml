@@ -1,15 +1,17 @@
 <?xml version="1.0"?>
 <package>
   <name>baxter_description</name>
-  <version>0.6.1</version>
-  <description>Description of Baxter robot from Rethink Robotics. This package
-  contains the URDF and meshes describing Baxter.</description>
+  <version>0.7.0</version>
+  <description>
+    Description of Baxter Research Robot from Rethink Robotics.
+    This package contains the URDF and meshes describing Baxter.
+  </description>
 
   <maintainer email="rsdk.support@rethinkrobotics.com">
     Rethink Robotics Inc.
   </maintainer>
   <license>BSD</license>
-  <url type="website">http://www.rethinkrobotics.com</url>
+  <url type="website">http://www.rethinkrobotics.com/sdk</url>
   <url type="repository">
     https://github.com/RethinkRobotics/baxter_common
   </url>
