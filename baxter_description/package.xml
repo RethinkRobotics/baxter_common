@@ -2,8 +2,10 @@
 <package>
   <name>baxter_description</name>
   <version>0.7.0</version>
-  <description>Description of Baxter robot from Rethink Robotics. This package
-  contains the URDF and meshes describing Baxter.</description>
+  <description>
+    Description of Baxter Research Robot from Rethink Robotics.
+    This package contains the URDF and meshes describing Baxter.
+  </description>
 
   <maintainer email="rsdk.support@rethinkrobotics.com">
     Rethink Robotics Inc.
