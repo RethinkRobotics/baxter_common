@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
 <package>
   <name>baxter_common</name>
-  <version>0.6.1</version>
-  <description>URDF, meshes, and custom messages
-    describing the Baxter robot from Rethink Robotics.
+  <version>0.7.0</version>
+  <description>
+    URDF, meshes, and custom messages describing the Baxter Research
+    Robot from Rethink Robotics.
   </description>
 
   <maintainer email="rsdk.support@rethinkrobotics.com">
     Rethink Robotics Inc.
   </maintainer>
   <license>BSD</license>
-  <url type="website">http://www.rethinkrobotics.com</url>
+  <url type="website">http://www.rethinkrobotics.com/sdk</url>
   <url type="repository">
     https://github.com/RethinkRobotics/baxter_common
   </url>
