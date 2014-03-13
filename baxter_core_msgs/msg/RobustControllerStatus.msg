@@ -21,3 +21,9 @@ bool timedOut
 # robust controllers, consult a robust controller's documentation to see what
 # error codes it generates.
 string[] errorCodes
+
+# A list of current labels for the RC's current state. For example, "fastapproach",
+# "slowapproach", etc. Used primarily for the blended RCs, other RCs can leave this
+# blank. This will probably contains just one label, but it could contain multiple labels
+# in the future.
+string[] labels
