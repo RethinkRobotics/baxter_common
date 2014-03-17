@@ -153,6 +153,32 @@
       <inertia ixx="0.004006" ixy="0.000230" ixz="0.000002" iyy="0.002800" iyz="0.000029" izz="0.001509"/>
     </inertial>
   </link>
+  <link name="display">
+    <visual>
+      <origin rpy="0.2617993877991494 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.218 0.16 0.001" />
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.00094542"/>
+      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+    </inertial>
+  </link>
+    <!-- link name="display">
+    <visual>
+      <origin rpy="0.261666667 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.218 0.16 0.001" />
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="0.004006" ixy="0.000230" ixz="0.000002" iyy="0.002800" iyz="0.000029" izz="0.001509"/>
+    </inertial>
+  </link -->
   <link name="head_camera">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -263,6 +289,16 @@
     <parent link="head"/>
     <child link="screen"/>
   </joint>
+  <joint name="display_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 -0.016 0.0"/>
+    <parent link="screen"/>
+    <child link="display"/>
+    </joint>
+  <!-- joint name="display_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 -0.016 0.0"/>
+    <parent link="screen"/>
+    <child link="display"/ -->
+  
   <joint name="head_camera" type="fixed">
     <origin rpy="1.75057 0 1.57079632679" xyz="0.12839 0 0.06368"/>
     <parent link="head"/>
@@ -1007,6 +1043,9 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
+
+  
+  
   <joint name="left_torso_arm_mount" type="fixed">
     <origin rpy="0 0 0.7854" xyz="0.024645 0.219645 0.118588"/>
     <parent link="torso"/>
@@ -1259,50 +1298,275 @@
     <selfCollide>true</selfCollide>
   </gazebo>
   <gazebo reference="head_pan">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_s0">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_s1">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_e0">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_e1">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_w0">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_w1">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_w2">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_s0">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_s1">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_e0">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_e1">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_w0">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_w1">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_w2">
-    <cfmDamping>1</cfmDamping>
+    <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
-
+<gazebo reference="head_camera">
+    <sensor name="head_camera" type="camera">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise is sampled independently per pixel on each frame.  
+               That pixel's noise value is added to each of its color
+               channels, which at that point lie in the range [0,1]. -->
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin filename="libgazebo_ros_camera.so" name="camera_controller">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>head_camera</cameraName>
+        <imageTopicName>image</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>head_camera</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+	<robotNamespace>/cameras</robotNamespace>
+      </plugin>
+    </sensor>
+</gazebo>
+<gazebo reference="right_hand_camera">
+    <sensor name="right_hand_camera" type="camera">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise is sampled independently per pixel on each frame.  
+               That pixel's noise value is added to each of its color
+               channels, which at that point lie in the range [0,1]. -->
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin filename="libgazebo_ros_camera.so" name="camera_controller">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>right_hand_camera</cameraName>
+        <imageTopicName>image</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>head_camera</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+	<robotNamespace>/cameras</robotNamespace>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <gazebo reference="left_hand_camera">
+    <sensor name="left_hand_camera" type="camera">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise is sampled independently per pixel on each frame.  
+               That pixel's noise value is added to each of its color
+               channels, which at that point lie in the range [0,1]. -->
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin filename="libgazebo_ros_camera.so" name="camera_controller">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>left_hand_camera</cameraName>
+        <imageTopicName>image</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>head_camera</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+	<robotNamespace>/cameras</robotNamespace>
+      </plugin>
+    </sensor>
+    </gazebo>
+    <gazebo reference="display">
+    <visual>
+      <plugin name="screen_video_controller" filename="libgazebo_ros_video.so">
+		<height>600</height>
+		<width>1024</width>
+		<topicName>/robot/xdisplay</topicName>
+		<!-- topicName>/cameras/left_hand_camera/image</topicName -->
+      </plugin>
+    </visual>
+  </gazebo>
+ <gazebo reference="sonar_ring">
+ 	<sensor name="sonar" type="ray">
+                    <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+                    <ray>
+                        <scan>
+                            <horizontal>
+                                <samples>300</samples>
+                                <resolution>1.0</resolution>
+                                <min_angle>-3.14</min_angle>
+                                <max_angle>3.14</max_angle>
+                            </horizontal>
+                            <vertical>
+                                <samples>100</samples>
+                                <resolution>1.0</resolution>
+                                <min_angle>-0.5236</min_angle>
+                                <max_angle>0.5236</max_angle>
+                            </vertical>
+                        </scan>
+                        <range>
+                            <min>0.05</min>
+                            <max>50.0</max>
+                        </range>
+                    </ray>
+                    <!-- test plugin -->
+                    <plugin name="sonar_plugin" filename="libgazebo_ros_block_laser.so">
+                        <gaussianNoise>0.00</gaussianNoise>
+                        <alwaysOn>true</alwaysOn>
+                        <updateRate>20</updateRate>
+                        <topicName>/robot/sonar/head_sonar/state</topicName>
+                        <frameName>base</frameName>
+                    </plugin>
+                    <always_on>true</always_on>
+                    <update_rate>10.0</update_rate>
+   	</sensor>
+   </gazebo>
+      <gazebo reference="right_hand_range">
+      <sensor name="ir_right" type="ray">
+                    <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+                    <ray>
+                    <scan>
+                        <!-- scan display="true" -->
+                            <horizontal>
+                                <samples>641</samples>
+                                <resolution>1.0</resolution>
+                                <min_angle>-0.5</min_angle>
+                                <max_angle>0.5</max_angle>
+                            </horizontal>
+                            <!--vertical samples="1" resolution="1.0" min_angle="-0.5236" max_angle="0.5236" /-->
+                        </scan>
+                        <range>
+                            <min>0.004</min>
+                            <max>0.4</max>
+                        </range>
+                    </ray>
+                    <!-- test plugin -->
+                    <plugin name="plugin_3" filename="libgazebo_ros_laser.so">
+                        <gaussianNoise>0.005</gaussianNoise>
+                        <alwaysOn>true</alwaysOn>
+                        <updateRate>20</updateRate>
+                        <topicName>/robot/laserscan/right_hand_range/state</topicName>
+                        <frameName>base</frameName>
+                    </plugin>
+                    <always_on>true</always_on>
+                    <update_rate>2.0</update_rate>
+       </sensor>
+       </gazebo>
+      <gazebo reference="left_hand_range">
+      <sensor name="ir_left" type="ray">
+                    <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+                    <ray>
+                    <scan>
+                        <!-- scan display="true" -->
+                            <horizontal>
+                                <samples>641</samples>
+                                <resolution>1.0</resolution>
+                                <min_angle>-0.5</min_angle>
+                                <max_angle>0.5</max_angle>
+                            </horizontal>
+                            <!--vertical samples="1" resolution="1.0" min_angle="-0.5236" max_angle="0.5236" /-->
+                        </scan>
+                        <range>
+                            <min>0.004</min>
+                            <max>0.4</max>
+                        </range>
+                    </ray>
+                    <!-- test plugin -->
+                    <plugin name="plugin_4" filename="libgazebo_ros_laser.so">
+                        <gaussianNoise>0.005</gaussianNoise>
+                        <alwaysOn>true</alwaysOn>
+                        <updateRate>20</updateRate>
+                        <topicName>/robot/laserscan/left_hand_range/state</topicName>
+                        <frameName>base</frameName>
+                    </plugin>
+                    <always_on>true</always_on>
+                    <update_rate>2.0</update_rate>
+       </sensor>
+       </gazebo>
 </robot>
-
