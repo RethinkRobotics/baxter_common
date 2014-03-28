@@ -157,28 +157,15 @@
     <visual>
       <origin rpy="0.2617993877991494 0 0" xyz="0 0 0"/>
       <geometry>
-        <box size="0.218 0.16 0.001" />
+        <box size="0.218 0.16 0.001"/>
       </geometry>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.00094542"/>
-      <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
-    <!-- link name="display">
-    <visual>
-      <origin rpy="0.261666667 0 0" xyz="0 0 0"/>
-      <geometry>
-        <box size="0.218 0.16 0.001" />
-      </geometry>
-    </visual>
-    <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <mass value="0.001"/>
-      <inertia ixx="0.004006" ixy="0.000230" ixz="0.000002" iyy="0.002800" iyz="0.000029" izz="0.001509"/>
-    </inertial>
-  </link -->
   <link name="head_camera">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -289,20 +276,15 @@
     <parent link="head"/>
     <child link="screen"/>
   </joint>
-  <joint name="display_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.0 -0.016 0.0"/>
-    <parent link="screen"/>
-    <child link="display"/>
-    </joint>
-  <!-- joint name="display_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.0 -0.016 0.0"/>
-    <parent link="screen"/>
-    <child link="display"/ -->
-  
   <joint name="head_camera" type="fixed">
     <origin rpy="1.75057 0 1.57079632679" xyz="0.12839 0 0.06368"/>
     <parent link="head"/>
     <child link="head_camera"/>
+  </joint>
+  <joint name="display_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0 -0.016 0.0"/>
+    <parent link="screen"/>
+    <child link="display"/>
   </joint>
   <joint name="sonar_s0" type="fixed">
     <origin rpy="0 0 0" xyz="0.0947 0 .817"/>
@@ -589,6 +571,22 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
+  <link name="right_hand_accelerometer">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
+    </inertial>
+  </link>
   <link name="right_gripper_base">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.02"/>
@@ -721,6 +719,11 @@
     <origin rpy="0 -1.57079632679 -1.57079632679" xyz="0.032 -0.020245 0.0288"/>
     <parent link="right_hand"/>
     <child link="right_hand_range"/>
+  </joint>
+  <joint name="right_hand_accelerometer" type="fixed">
+    <origin rpy="0 0 0" xyz="0.00198 0.000133 -0.0146"/>
+    <parent link="right_hand"/>
+    <child link="right_hand_accelerometer"/>
   </joint>
   <joint name="right_gripper_base" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -1011,6 +1014,22 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
+  <link name="left_hand_accelerometer">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
+      <mass value="0.0001"/>
+      <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
+    </inertial>
+  </link>
   <link name="left_gripper_base">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.02"/>
@@ -1043,9 +1062,6 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
-
-  
-  
   <joint name="left_torso_arm_mount" type="fixed">
     <origin rpy="0 0 0.7854" xyz="0.024645 0.219645 0.118588"/>
     <parent link="torso"/>
@@ -1146,6 +1162,11 @@
     <origin rpy="0 -1.57079632679 -1.57079632679" xyz="0.032 -0.020245 0.0288"/>
     <parent link="left_hand"/>
     <child link="left_hand_range"/>
+  </joint>
+  <joint name="left_hand_accelerometer" type="fixed">
+    <origin rpy="0 0 0" xyz="0.00198 0.000133 -0.0146"/>
+    <parent link="left_hand"/>
+    <child link="left_hand_accelerometer"/>
   </joint>
   <joint name="left_gripper_base" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0"/>
