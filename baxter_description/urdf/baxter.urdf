@@ -159,6 +159,9 @@
       <geometry>
         <box size="0.218 0.16 0.001"/>
       </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
     </visual>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
