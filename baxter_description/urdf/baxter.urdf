@@ -1554,12 +1554,12 @@
                     <plugin name="plugin_3" filename="libgazebo_ros_laser.so">
                         <gaussianNoise>0.005</gaussianNoise>
                         <alwaysOn>true</alwaysOn>
-                        <updateRate>20</updateRate>
+                        <updateRate>100</updateRate>
                         <topicName>/robot/laserscan/right_hand_range/state</topicName>
-                        <frameName>base</frameName>
+			<frameName>right_hand_range</frameName>
                     </plugin>
                     <always_on>true</always_on>
-                    <update_rate>2.0</update_rate>
+                    <update_rate>100.0</update_rate>
        </sensor>
        </gazebo>
       <gazebo reference="left_hand_range">
@@ -1585,12 +1585,12 @@
                     <plugin name="plugin_4" filename="libgazebo_ros_laser.so">
                         <gaussianNoise>0.005</gaussianNoise>
                         <alwaysOn>true</alwaysOn>
-                        <updateRate>20</updateRate>
+                        <updateRate>100</updateRate>
                         <topicName>/robot/laserscan/left_hand_range/state</topicName>
-                        <frameName>base</frameName>
+                        <frameName>left_hand_range</frameName>
                     </plugin>
                     <always_on>true</always_on>
-                    <update_rate>2.0</update_rate>
+                    <update_rate>100.0</update_rate>
        </sensor>
        </gazebo>
 </robot>
