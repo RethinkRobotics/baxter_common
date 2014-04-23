@@ -16,11 +16,6 @@ add_message_files(DIRECTORY msg FILES
   UpdateStatus.msg
 )
 
-add_service_files(DIRECTORY srv FILES
-  LSCores.srv
-  RMCores.srv
-)
-
 generate_messages(DEPENDENCIES
   std_msgs
 )
