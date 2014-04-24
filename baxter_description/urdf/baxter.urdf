@@ -1455,7 +1455,7 @@
         <gaussianNoise>0.005</gaussianNoise>
         <alwaysOn>true</alwaysOn>
         <updateRate>100</updateRate>
-        <topicName>/robot/laserscan/right_hand_range/state</topicName>
+        <topicName>/sim/laserscan/right_hand_range/state</topicName>
         <frameName>right_hand_range</frameName>
       </plugin>
       <always_on>true</always_on>
@@ -1483,7 +1483,7 @@
         <gaussianNoise>0.005</gaussianNoise>
         <alwaysOn>true</alwaysOn>
         <updateRate>100</updateRate>
-        <topicName>/robot/laserscan/left_hand_range/state</topicName>
+        <topicName>/sim/laserscan/left_hand_range/state</topicName>
         <frameName>left_hand_range</frameName>
       </plugin>
       <always_on>true</always_on>
