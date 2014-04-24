@@ -31,9 +31,8 @@ baxter_common Repository Overview
      |   +-- msgs/
      |   +-- srvs/
      |
-     +-- baxter_maintenance_msgs/ messages and services for baxter maintenance routines
+     +-- baxter_maintenance_msgs/ messages for baxter maintenance routines
      |   +-- msgs/
-     |   +-- srvs/
 
 
 Other Baxter Repositories
