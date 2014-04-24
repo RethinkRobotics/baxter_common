@@ -1427,7 +1427,7 @@
         <gaussianNoise>0.00</gaussianNoise>
         <alwaysOn>true</alwaysOn>
         <updateRate>20</updateRate>
-        <topicName>/robot/sonar/head_sonar/state</topicName>
+        <topicName>/sim/sonar/head_sonar/state</topicName>
         <frameName>base</frameName>
       </plugin>
       <always_on>true</always_on>
@@ -1455,7 +1455,7 @@
         <gaussianNoise>0.005</gaussianNoise>
         <alwaysOn>true</alwaysOn>
         <updateRate>100</updateRate>
-        <topicName>/robot/laserscan/right_hand_range/state</topicName>
+        <topicName>/sim/laserscan/right_hand_range/state</topicName>
         <frameName>right_hand_range</frameName>
       </plugin>
       <always_on>true</always_on>
