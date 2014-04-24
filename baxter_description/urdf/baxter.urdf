@@ -582,7 +582,7 @@
     <axis xyz="0 0 1"/>
     <parent link="right_upper_shoulder"/>
     <child link="right_lower_shoulder"/>
-    <limit effort="50.0" lower="-2.147" upper="1.047" velocity="1.5"/>
+    <limit effort="100.0" lower="-2.147" upper="1.047" velocity="1.5"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="right_e0" type="revolute">
@@ -994,7 +994,7 @@
     <axis xyz="0 0 1"/>
     <parent link="left_upper_shoulder"/>
     <child link="left_lower_shoulder"/>
-    <limit effort="50.0" lower="-2.147" upper="1.047" velocity="1.5"/>
+    <limit effort="100.0" lower="-2.147" upper="1.047" velocity="1.5"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
   <joint name="left_e0" type="revolute">
@@ -1280,11 +1280,12 @@
 <gazebo reference="head_camera">
   <sensor name="head_camera" type="camera">
     <update_rate>30.0</update_rate>
-    <camera name="head">
+    <camera name="head_camera">
+      <pose>0.0 0.21 0.0 0.0 -0.8 -1.570796327 </pose>
       <horizontal_fov>1.3962634</horizontal_fov>
       <image>
-        <width>640</width>
-        <height>400</height>
+        <width>800</width>
+        <height>800</height>
         <format>R8G8B8</format>
       </image>
       <clip>
@@ -1316,12 +1317,13 @@
 </gazebo>
 <gazebo reference="right_hand_camera">
   <sensor name="right_hand_camera" type="camera">
-  <update_rate>30.0</update_rate>
-    <camera name="head">
+    <update_rate>30.0</update_rate>
+    <camera name="right_hand_camera">
+      <pose>0.0 0.0 0.0 0.0 -1.570796327 1.570796327 </pose>
       <horizontal_fov>1.3962634</horizontal_fov>
       <image>
-        <width>640</width>
-        <height>400</height>
+        <width>800</width>
+        <height>800</height>
         <format>R8G8B8</format>
       </image>
       <clip>
@@ -1340,7 +1342,7 @@
       <cameraName>right_hand_camera</cameraName>
       <imageTopicName>image</imageTopicName>
       <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-      <frameName>head_camera</frameName>
+      <frameName>right_hand_camera</frameName>
       <hackBaseline>0.07</hackBaseline>
       <distortionK1>0.0</distortionK1>
       <distortionK2>0.0</distortionK2>
@@ -1354,7 +1356,8 @@
 <gazebo reference="left_hand_camera">
   <sensor name="left_hand_camera" type="camera">
     <update_rate>30.0</update_rate>
-    <camera name="head">
+    <camera name="left_hand_camera">
+      <pose>0.0 0.0 0.0 0.0 -1.570796327 1.570796327 </pose>
       <horizontal_fov>1.3962634</horizontal_fov>
       <image>
         <width>800</width>
@@ -1377,7 +1380,7 @@
       <cameraName>left_hand_camera</cameraName>
       <imageTopicName>image</imageTopicName>
       <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-      <frameName>head_camera</frameName>
+      <frameName>left_hand_camera</frameName>
       <hackBaseline>0.07</hackBaseline>
       <distortionK1>0.0</distortionK1>
       <distortionK2>0.0</distortionK2>
@@ -1403,10 +1406,10 @@
     <ray>
       <scan>
         <horizontal>
-           <samples>300</samples>
-           <resolution>1.0</resolution>
-           <min_angle>-3.14</min_angle>
-           <max_angle>3.14</max_angle>
+          <samples>300</samples>
+          <resolution>1.0</resolution>
+          <min_angle>-3.14</min_angle>
+          <max_angle>3.14</max_angle>
         </horizontal>
         <vertical>
           <samples>100</samples>
@@ -1451,12 +1454,12 @@
     <plugin name="plugin_3" filename="libgazebo_ros_laser.so">
       <gaussianNoise>0.005</gaussianNoise>
       <alwaysOn>true</alwaysOn>
-      <updateRate>20</updateRate>
+      <updateRate>100</updateRate>
       <topicName>/robot/laserscan/right_hand_range/state</topicName>
-      <frameName>base</frameName>
+      <frameName>right_hand_range</frameName>
     </plugin>
     <always_on>true</always_on>
-    <update_rate>2.0</update_rate>
+    <update_rate>100.0</update_rate>
   </sensor>
 </gazebo>
 <gazebo reference="left_hand_range">
@@ -1479,12 +1482,12 @@
     <plugin name="plugin_4" filename="libgazebo_ros_laser.so">
       <gaussianNoise>0.005</gaussianNoise>
       <alwaysOn>true</alwaysOn>
-      <updateRate>20</updateRate>
+      <updateRate>100</updateRate>
       <topicName>/robot/laserscan/left_hand_range/state</topicName>
-      <frameName>base</frameName>
+      <frameName>left_hand_range</frameName>
     </plugin>
     <always_on>true</always_on>
-    <update_rate>2.0</update_rate>
+    <update_rate>100.0</update_rate>
   </sensor>
 </gazebo>
 </robot>
