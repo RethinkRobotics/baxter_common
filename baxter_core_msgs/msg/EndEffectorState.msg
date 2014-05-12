@@ -9,7 +9,7 @@ uint32 id                   # EndEffectorId
 #
 uint8   enabled             # true if enabled
 uint8   calibrated          # true if calibration has completed
-uint8   ready               # true if ready to grip
+uint8   ready               # true if ready for another command
 uint8   moving              # true if moving
 uint8   gripping            # true if gripping
 uint8   missed              # true if GRIP/GOTO/SET was commanded and the gripper reaches the end of travel

@@ -7,11 +7,11 @@ Code & Tickets
 --------------
 
 +-----------------+----------------------------------------------------------------+
-| Documentation   | https://github.com/RethinkRobotics/sdk-docs/wiki               |
+| Documentation   | http://sdk.rethinkrobotics.com/wiki                            |
 +-----------------+----------------------------------------------------------------+
 | Issues          | https://github.com/RethinkRobotics/baxter_common/issues        |
 +-----------------+----------------------------------------------------------------+
-| Contributions   | https://github.com/RethinkRobotics/sdk-docs/wiki/Contributions |
+| Contributions   | http://sdk.rethinkrobotics.com/wiki/Contributions              |
 +-----------------+----------------------------------------------------------------+
 
 baxter_common Repository Overview
@@ -31,9 +31,8 @@ baxter_common Repository Overview
      |   +-- msgs/
      |   +-- srvs/
      |
-     +-- baxter_maintenance_msgs/ messages and services for baxter maintenance routines
+     +-- baxter_maintenance_msgs/ messages for baxter maintenance routines
      |   +-- msgs/
-     |   +-- srvs/
 
 
 Other Baxter Repositories
@@ -52,4 +51,4 @@ Other Baxter Repositories
 Latest Release Information
 --------------------------
 
-https://github.com/RethinkRobotics/sdk-docs/wiki/Release-Changes
+http://sdk.rethinkrobotics.com/wiki/Release-Changes
