@@ -10,13 +10,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://baxter_description/meshes/torso/base_link.DAE"/>
+        <mesh filename="package://baxter_description/meshes/torso/base_link.STL"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://baxter_description/meshes/torso/base_link_collision.DAE"/>
+        <mesh filename="package://baxter_description/meshes/torso/base_link_collision.STL"/>
       </geometry>
     </collision>
     <inertial>
@@ -54,7 +54,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://baxter_description/meshes/base/pedestal_link_collision.DAE"/>
+        <mesh filename="package://baxter_description/meshes/base/pedestal_link_collision.STL"/>
       </geometry>
     </collision>
     <inertial>
