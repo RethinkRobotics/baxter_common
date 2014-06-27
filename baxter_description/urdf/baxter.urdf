@@ -274,6 +274,7 @@
   </joint>
   <link name="right_arm_mount">
     <!-- all defaults -->
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
@@ -281,6 +282,7 @@
     </inertial>
   </link>
   <link name="right_upper_shoulder">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -303,6 +305,7 @@
     </inertial>
   </link>
   <link name="right_lower_shoulder">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -325,6 +328,7 @@
     </inertial>
   </link>
   <link name="right_upper_elbow">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -347,6 +351,7 @@
     </inertial>
   </link>
   <link name="right_upper_elbow_visual">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.1365"/>
       <geometry>
@@ -360,6 +365,7 @@
     </inertial>
   </link>
   <link name="right_lower_elbow">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -382,6 +388,7 @@
     </inertial>
   </link>
   <link name="right_upper_forearm">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -404,6 +411,7 @@
     </inertial>
   </link>
   <link name="right_upper_forearm_visual">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.136"/>
       <geometry>
@@ -417,6 +425,7 @@
     </inertial>
   </link>
   <link name="right_arm_itb">
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
       <mass value="0.0001"/>
@@ -424,6 +433,7 @@
     </inertial>
   </link>
   <link name="right_lower_forearm">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -446,6 +456,7 @@
     </inertial>
   </link>
   <link name="right_wrist">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -468,6 +479,7 @@
     </inertial>
   </link>
   <link name="right_hand">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.0232"/>
       <geometry>
@@ -481,6 +493,7 @@
     </inertial>
   </link>
   <link name="right_hand_camera">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -497,6 +510,7 @@
     </inertial>
   </link>
   <link name="right_hand_camera_axis">
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
@@ -504,6 +518,7 @@
     </inertial>
   </link>
   <link name="right_hand_range">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -520,6 +535,7 @@
     </inertial>
   </link>
   <link name="right_hand_accelerometer">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -536,6 +552,7 @@
     </inertial>
   </link>
   <link name="right_gripper_base">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.02"/>
       <geometry>
@@ -552,6 +569,7 @@
     </inertial>
   </link>
   <link name="right_gripper">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -685,6 +703,7 @@
   </joint>
   <link name="left_arm_mount">
     <!-- all defaults -->
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
@@ -692,6 +711,7 @@
     </inertial>
   </link>
   <link name="left_upper_shoulder">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -714,6 +734,7 @@
     </inertial>
   </link>
   <link name="left_lower_shoulder">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -736,6 +757,7 @@
     </inertial>
   </link>
   <link name="left_upper_elbow">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -758,6 +780,7 @@
     </inertial>
   </link>
   <link name="left_upper_elbow_visual">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.1365"/>
       <geometry>
@@ -771,6 +794,7 @@
     </inertial>
   </link>
   <link name="left_lower_elbow">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -793,6 +817,7 @@
     </inertial>
   </link>
   <link name="left_upper_forearm">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -815,6 +840,7 @@
     </inertial>
   </link>
   <link name="left_upper_forearm_visual">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.136"/>
       <geometry>
@@ -828,6 +854,7 @@
     </inertial>
   </link>
   <link name="left_arm_itb">
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
       <mass value="0.0001"/>
@@ -835,6 +862,7 @@
     </inertial>
   </link>
   <link name="left_lower_forearm">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -857,6 +885,7 @@
     </inertial>
   </link>
   <link name="left_wrist">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -879,6 +908,7 @@
     </inertial>
   </link>
   <link name="left_hand">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.0232"/>
       <geometry>
@@ -892,6 +922,7 @@
     </inertial>
   </link>
   <link name="left_hand_camera">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -908,6 +939,7 @@
     </inertial>
   </link>
   <link name="left_hand_camera_axis">
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
@@ -915,6 +947,7 @@
     </inertial>
   </link>
   <link name="left_hand_range">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -931,6 +964,7 @@
     </inertial>
   </link>
   <link name="left_hand_accelerometer">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -947,6 +981,7 @@
     </inertial>
   </link>
   <link name="left_gripper_base">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.02"/>
       <geometry>
@@ -963,6 +998,7 @@
     </inertial>
   </link>
   <link name="left_gripper">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
