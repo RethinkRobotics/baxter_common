@@ -1,3 +1,7 @@
+1.0.1 (2014-9-10)
+---------------------------------
+- Adds meshes and URDF to baxter_description installation
+
 1.0.0 (2014-5-1)
 ---------------------------------
 - Updates baxter_core_msgs IK solver service file adding seeding options
