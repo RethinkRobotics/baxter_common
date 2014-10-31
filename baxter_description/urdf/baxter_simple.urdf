@@ -12,6 +12,9 @@
       <geometry>
         <mesh filename="package://baxter_description/meshes/torso/base_link_collision.STL"/>
       </geometry>
+      <material name="darkgray">
+        <color rgba=".2 .2 .2 1"/>
+      </material>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
