@@ -545,6 +545,7 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
+<!-- this is defined in xacro 
   <link name="right_gripper_base">
  <gravity>0</gravity>
     <visual>
@@ -579,6 +580,7 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
+-->
   <joint name="right_torso_arm_mount" type="fixed">
     <origin rpy="0 0 -0.7854" xyz="0.024645 -0.219645 0.118588"/>
     <parent link="torso"/>
@@ -690,11 +692,13 @@
     <parent link="right_hand"/>
     <child link="right_gripper_base"/>
   </joint>
+<!-- this is defined in xacro 
   <joint name="right_endpoint" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 0 0.025"/>
     <parent link="right_gripper_base"/>
     <child link="right_gripper"/>
   </joint>
+-->
   <link name="left_arm_mount">
     <!-- all defaults -->
  <gravity>0</gravity>
@@ -974,6 +978,7 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
+<!-- this is defined in xacro 
   <link name="left_gripper_base">
  <gravity>0</gravity>
     <visual>
@@ -1008,6 +1013,7 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
+-->
   <joint name="left_torso_arm_mount" type="fixed">
     <origin rpy="0 0 0.7854" xyz="0.024645 0.219645 0.118588"/>
     <parent link="torso"/>
@@ -1119,12 +1125,13 @@
     <parent link="left_hand"/>
     <child link="left_gripper_base"/>
   </joint>
+<!-- this is defined in xacro 
   <joint name="left_endpoint" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 0 0.025"/>
     <parent link="left_gripper_base"/>
     <child link="left_gripper"/>
   </joint>
-
+-->
   <!-- Transmissions -->
 
   <!-- Right Arm -->
