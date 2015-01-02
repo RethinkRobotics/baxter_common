@@ -1,3 +1,9 @@
+1.1.0 (2015-1-2)
+---------------------------------
+- Updates baxter_core_msgs SEAJointState.msg to accommodate Feed Forward acceleration command
+- Updates baxter_description baxter.urdf to use "hardwareInterface" tag for Gazebo
+- Updates baxter_description baxter.urdf to use "gravity 0" tag on links
+
 1.0.1 (2014-9-10)
 ---------------------------------
 - Adds meshes and URDF to baxter_description installation
