@@ -1,14 +1,10 @@
-# OK button
-bool ok
-# Cancel button
-bool cancel
-# Show button
-bool show
-# Wheel button
+# buttons
+string[] names
+bool[] buttons
+
+# wheel position
 uint8   wheel
 
-# true if the inner light is on, false if not
-bool innerLight
-
-# true if the outer light is on, false if not
-bool outerLight
+# true if the light is on, false if not
+# lights map to button names
+bool[] lights

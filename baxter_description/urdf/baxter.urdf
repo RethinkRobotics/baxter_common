@@ -26,7 +26,6 @@
     </inertial>
   </link>
   <link name="left_torso_itb">
-    <!-- note: invisible -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
       <mass value="0.0001"/>
@@ -34,7 +33,6 @@
     </inertial>
   </link>
   <link name="right_torso_itb">
-    <!-- note: invisible -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
       <mass value="0.0001"/>
@@ -270,6 +268,7 @@
   </joint>
   <link name="right_arm_mount">
     <!-- all defaults -->
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
@@ -277,6 +276,7 @@
     </inertial>
   </link>
   <link name="right_upper_shoulder">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -299,6 +299,7 @@
     </inertial>
   </link>
   <link name="right_lower_shoulder">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -321,6 +322,7 @@
     </inertial>
   </link>
   <link name="right_upper_elbow">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -343,6 +345,7 @@
     </inertial>
   </link>
   <link name="right_upper_elbow_visual">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.1365"/>
       <geometry>
@@ -356,6 +359,7 @@
     </inertial>
   </link>
   <link name="right_lower_elbow">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -378,6 +382,7 @@
     </inertial>
   </link>
   <link name="right_upper_forearm">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -400,6 +405,7 @@
     </inertial>
   </link>
   <link name="right_upper_forearm_visual">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.136"/>
       <geometry>
@@ -413,7 +419,7 @@
     </inertial>
   </link>
   <link name="right_arm_itb">
-    <!-- note: invisible -->
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
       <mass value="0.0001"/>
@@ -421,6 +427,7 @@
     </inertial>
   </link>
   <link name="right_lower_forearm">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -443,6 +450,7 @@
     </inertial>
   </link>
   <link name="right_wrist">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -465,6 +473,7 @@
     </inertial>
   </link>
   <link name="right_hand">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.0232"/>
       <geometry>
@@ -478,6 +487,7 @@
     </inertial>
   </link>
   <link name="right_hand_camera">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -494,6 +504,7 @@
     </inertial>
   </link>
   <link name="right_hand_camera_axis">
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
@@ -501,6 +512,7 @@
     </inertial>
   </link>
   <link name="right_hand_range">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -517,6 +529,7 @@
     </inertial>
   </link>
   <link name="right_hand_accelerometer">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -533,6 +546,7 @@
     </inertial>
   </link>
   <link name="right_gripper_base">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.02"/>
       <geometry>
@@ -549,6 +563,7 @@
     </inertial>
   </link>
   <link name="right_gripper">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -682,6 +697,7 @@
   </joint>
   <link name="left_arm_mount">
     <!-- all defaults -->
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
@@ -689,6 +705,7 @@
     </inertial>
   </link>
   <link name="left_upper_shoulder">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -711,6 +728,7 @@
     </inertial>
   </link>
   <link name="left_lower_shoulder">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -733,6 +751,7 @@
     </inertial>
   </link>
   <link name="left_upper_elbow">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -755,6 +774,7 @@
     </inertial>
   </link>
   <link name="left_upper_elbow_visual">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.1365"/>
       <geometry>
@@ -768,6 +788,7 @@
     </inertial>
   </link>
   <link name="left_lower_elbow">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -790,6 +811,7 @@
     </inertial>
   </link>
   <link name="left_upper_forearm">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -812,6 +834,7 @@
     </inertial>
   </link>
   <link name="left_upper_forearm_visual">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0.136"/>
       <geometry>
@@ -825,7 +848,7 @@
     </inertial>
   </link>
   <link name="left_arm_itb">
-    <!-- note: invisible -->
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
       <mass value="0.0001"/>
@@ -833,6 +856,7 @@
     </inertial>
   </link>
   <link name="left_lower_forearm">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -855,6 +879,7 @@
     </inertial>
   </link>
   <link name="left_wrist">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -877,6 +902,7 @@
     </inertial>
   </link>
   <link name="left_hand">
+ <gravity>0</gravity>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.0232"/>
       <geometry>
@@ -890,6 +916,7 @@
     </inertial>
   </link>
   <link name="left_hand_camera">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -906,6 +933,7 @@
     </inertial>
   </link>
   <link name="left_hand_camera_axis">
+ <gravity>0</gravity>
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
@@ -913,6 +941,7 @@
     </inertial>
   </link>
   <link name="left_hand_range">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -929,6 +958,7 @@
     </inertial>
   </link>
   <link name="left_hand_accelerometer">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -945,6 +975,7 @@
     </inertial>
   </link>
   <link name="left_gripper_base">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 -0.02"/>
       <geometry>
@@ -961,6 +992,7 @@
     </inertial>
   </link>
   <link name="left_gripper">
+ <gravity>0</gravity>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -1098,7 +1130,9 @@
   <!-- Right Arm -->
   <transmission name="right_tran1">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_s0"/>
+    <joint name="right_s0">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="right_motor1">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1106,7 +1140,9 @@
   </transmission>
   <transmission name="right_tran2">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_s1"/>
+    <joint name="right_s1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="right_motor2">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1114,7 +1150,9 @@
   </transmission>
   <transmission name="right_tran3">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_e0"/>
+    <joint name="right_e0">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="right_motor3">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1122,7 +1160,9 @@
   </transmission>
   <transmission name="right_tran4">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_e1"/>
+    <joint name="right_e1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="right_motor4">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1130,7 +1170,9 @@
   </transmission>
   <transmission name="right_tran5">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_w0"/>
+    <joint name="right_w0">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="right_motor5">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1138,7 +1180,9 @@
   </transmission>
   <transmission name="right_tran6">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_w1"/>
+    <joint name="right_w1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="right_motor6">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1146,7 +1190,9 @@
   </transmission>
   <transmission name="right_tran7">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_w2"/>
+    <joint name="right_w2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="right_motor7">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1156,7 +1202,9 @@
   <!-- Left Arm -->
   <transmission name="left_tran1">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="left_s0"/>
+    <joint name="left_s0">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="left_motor1">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1164,7 +1212,9 @@
   </transmission>
   <transmission name="left_tran2">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="left_s1"/>
+    <joint name="left_s1">      
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="left_motor2">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1172,7 +1222,9 @@
   </transmission>
   <transmission name="left_tran3">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="left_e0"/>
+    <joint name="left_e0">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="left_motor3">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1180,7 +1232,9 @@
   </transmission>
   <transmission name="left_tran4">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="left_e1"/>
+    <joint name="left_e1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="left_motor4">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1188,7 +1242,9 @@
   </transmission>
   <transmission name="left_tran5">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="left_w0"/>
+    <joint name="left_w0">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="left_motor5">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1196,7 +1252,9 @@
   </transmission>
   <transmission name="left_tran6">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="left_w1"/>
+    <joint name="left_w1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="left_motor6">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1204,7 +1262,9 @@
   </transmission>
   <transmission name="left_tran7">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="left_w2"/>
+    <joint name="left_w2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="left_motor7">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
@@ -1214,7 +1274,9 @@
   <!-- Head -->
   <transmission name="head1">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="head_pan"/>
+    <joint name="head_pan">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
     <actuator name="head_motor1">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
