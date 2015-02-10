@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="wide_extended">
+  <xacro:property name="pi" value="3.1415926535897931" />
+  <xacro:macro name="finger_xacro" params="gripper_side finger_side reflect finger_tip add_finger_tip">
+    <link name="${gripper_side}_gripper_${finger_side}_finger">
+      <gravity>0</gravity>
+      <visual>
+        <origin rpy="0 0 ${pi/2*reflect}" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://baxter_description/meshes/electric_gripper/fingers/wide_extended.DAE" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin rpy="0 0 ${pi/2*reflect}" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://baxter_description/meshes/electric_gripper/fingers/wide_extended.DAE" />
+        </geometry>
+      </collision>
+      <inertial>
+        <origin rpy="0 0 ${pi/2*reflect}" xyz="0 0 0"/>
+        <mass value="0.02"/>
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+      </inertial>
+    </link>
+
+   <xacro:if value="${add_finger_tip}">
+     <xacro:include filename="$(find baxter_description)/urdf/${finger_tip}.xacro" />
+     <xacro:finger_tip_xacro parent_link="${gripper_side}_gripper_${finger_side}_finger" reflect="${reflect}">
+         <origin rpy="0 0 0" xyz="0.0 ${reflect*0.052} 0.112"/>
+     </xacro:finger_tip_xacro>
+   </xacro:if>
+
+  </xacro:macro>
+</robot>

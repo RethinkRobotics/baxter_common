@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="left_electric_gripper">
+  <xacro:include filename="$(find baxter_description)/urdf/rethink_electric_gripper.xacro" />
+  <xacro:rethink_electric_gripper side="left"
+                                  gripper_side="l"
+                                  l_finger="extended_narrow"
+                                  l_finger_slot="1"
+                                  add_l_finger_tip="true"
+                                  l_finger_tip="paddle_tip" 
+                                  r_finger="extended_narrow" 
+                                  r_finger_slot="1" 
+                                  add_r_finger_tip="true" 
+                                  r_finger_tip="paddle_tip"/>
+
+</robot>
