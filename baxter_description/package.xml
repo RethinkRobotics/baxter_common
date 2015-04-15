@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>baxter_description</name>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
   <description>
     Description of Baxter Research Robot from Rethink Robotics.
     This package contains the URDF and meshes describing Baxter.
