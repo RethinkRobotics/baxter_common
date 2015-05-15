@@ -1,3 +1,7 @@
+1.1.1 (2015-4-15)
+---------------------------------
+- Patch release for other baxter packages (no baxter_common changes)
+
 1.1.0 (2015-1-2)
 ---------------------------------
 - Updates baxter_core_msgs SEAJointState.msg to accommodate Feed Forward acceleration command
