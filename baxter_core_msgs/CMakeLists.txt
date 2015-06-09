@@ -35,6 +35,7 @@ add_message_files(DIRECTORY msg FILES
   NavigatorStates.msg
   RobustControllerStatus.msg
   SEAJointState.msg
+  URDFConfiguration.msg
 )
 
 add_service_files(DIRECTORY srv FILES
