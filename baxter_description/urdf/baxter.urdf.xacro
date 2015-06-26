@@ -1,8 +1,24 @@
-<?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="baxter_with_gripper_base">
-  <xacro:include filename="$(find baxter_description)/urdf/baxter_base.xacro" />
-  <xacro:include filename="$(find baxter_description)/urdf/gripper_base.xacro" />
+<?xml version="1.0" ?>
+<robot name="baxter" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Arguments and Defaults-->
+  <xacro:arg name="gazebo" default="false"/>
+  <xacro:arg name="left_end_effector" default="true"/>
+  <xacro:arg name="right_end_effector" default="true"/>
 
-  <xacro:gripper_base side="right" />
-  <xacro:gripper_base side="left" />
+  <!-- Baxter Base URDF -->
+  <xacro:include filename="$(find baxter_description)/urdf/baxter.urdf" />
+  <xacro:if value="$(arg gazebo)">
+      <xacro:include filename="$(find baxter_description)/urdf/gazebo/baxter.gazebo.xacro" />
+  </xacro:if>
+
+  <!-- Left End Effector -->
+  <xacro:if value="$(arg left_end_effector)">
+    <xacro:include filename="$(find baxter_description)/urdf/left_end_effector.urdf.xacro" />
+  </xacro:if>
+
+  <!-- Right End Effector -->
+  <xacro:if value="$(arg right_end_effector)">
+    <xacro:include filename="$(find baxter_description)/urdf/right_end_effector.urdf.xacro" />
+  </xacro:if>
+
 </robot>

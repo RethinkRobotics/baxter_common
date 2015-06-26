@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="custom_vacuum_gripper">
+  <xacro:macro name="custom_vacuum_gripper" params="side">
+
+    <!-- Base of end effector -->
+    <link name="${side}_gripper_vacuum_base">
+      <visual>
+        <origin rpy="${-pi/2} ${pi} 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://baxter_description/meshes/pneumatic_grippers_base.DAE"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin rpy="${-pi/2} ${pi} 0" xyz="0.0 0.0 0"/>
+        <geometry>
+          <cylinder length="0.1" radius="0.029"/>
+        </geometry>
+        <material name="darkred">
+          <color rgba=".5 .1 .1 1"/>
+        </material>
+      </collision>
+      <inertial>
+        <origin rpy="${-pi/2} ${pi} 0" xyz="0.0 0.0 0.0"/>
+        <mass value="0.3"/>
+        <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      </inertial>
+    </link>
+
+    <!-- Vacuum Gripper Base -->
+    <joint name="${gripper_side}_gripper_electric_base_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0.025"/>
+      <parent link="${side}_gripper_base"/>
+      <child link="${side}_gripper_vacuum_base"/>
+    </joint>
+
+  </xacro:macro>
+</robot>
