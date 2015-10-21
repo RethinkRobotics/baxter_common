@@ -35,6 +35,14 @@
       </inertial>
     </link>
 
+    <gazebo reference="${gripper_side}_gripper_${finger_side}_finger">
+      <mu1>1000</mu1>
+      <mu2>1000</mu2>
+      <fdir1>0.0 0.0 1.0</fdir1>
+      <kp>1e5</kp>
+      <kd>1.0</kd>
+    </gazebo>
+
    <xacro:property name="none" value="[none, false, null, empty]" scope="local"/>
    <xacro:if value="${finger_tip in none}">
      <xacro:property name="finger_tip" value="none" scope="local"/>
