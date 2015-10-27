@@ -9,7 +9,7 @@
       <visual>
         <origin rpy="0 0 ${pi*(g_reflect+1)/2}" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://baxter_description/meshes/electric_gripper/fingers/paddle_tip.DAE" />
+          <mesh filename="package://rethink_ee_description/meshes/electric_gripper/fingers/paddle_tip.DAE" />
         </geometry>
       </visual>
       <collision>

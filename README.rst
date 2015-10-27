@@ -33,6 +33,10 @@ baxter_common Repository Overview
      |
      +-- baxter_maintenance_msgs/ messages for baxter maintenance routines
      |   +-- msgs/
+     |
+     +-- rethink_ee_description/  urdf and meshes describing end effectors
+     |   +-- urdf/
+     |   +-- meshes/
 
 
 Other Baxter Repositories

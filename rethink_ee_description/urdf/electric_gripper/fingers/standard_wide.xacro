@@ -7,7 +7,7 @@
       <visual>
         <origin rpy="0 0 ${-pi/2*(reflect+1)}" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://baxter_description/meshes/electric_gripper/fingers/standard_wide.DAE" />
+          <mesh filename="package://rethink_ee_description/meshes/electric_gripper/fingers/standard_wide.DAE" />
         </geometry>
       </visual>
       <xacro:property name="finger_box_height" value="0.01" scope="local"/>
@@ -47,7 +47,7 @@
    <xacro:if value="${finger_tip in none}">
      <xacro:property name="finger_tip" value="none" scope="local"/>
    </xacro:if>
-   <xacro:include filename="$(find baxter_description)/urdf/electric_gripper/fingers/${finger_tip}.xacro" />
+   <xacro:include filename="$(find rethink_ee_description)/urdf/electric_gripper/fingers/${finger_tip}.xacro" />
    <xacro:finger_tip_xacro parent_link="${gripper_side}_gripper_${finger_side}_finger" reflect="${reflect}" grasp="${finger_grasp}">
        <origin rpy="0 0 0" xyz="0.0 ${reflect*finger_width} ${finger_length}"/>
    </xacro:finger_tip_xacro>

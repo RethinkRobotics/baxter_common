@@ -7,7 +7,7 @@
       <visual>
         <origin rpy="${-pi/2} ${pi} 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://baxter_description/meshes/electric_gripper/electric_gripper_base.DAE"/>
+          <mesh filename="package://rethink_ee_description/meshes/electric_gripper/electric_gripper_base.DAE"/>
         </geometry>
       </visual>
       <collision>
@@ -28,12 +28,12 @@
 
     <!-- Left finger link -->
     <xacro:property name="finger_length" value="0.0" scope="global"/>
-    <xacro:include filename="$(find baxter_description)/urdf/electric_gripper/fingers/${l_finger}.xacro" />
+    <xacro:include filename="$(find rethink_ee_description)/urdf/electric_gripper/fingers/${l_finger}.xacro" />
     <xacro:finger_xacro gripper_side="${side}" finger_side="l" reflect="1" finger_tip="${l_finger_tip}" finger_grasp="${l_finger_grasp}"/>
     <xacro:property name="tip_finger_length" value="${finger_length}" scope="local"/>
 
     <!-- Right finger link -->
-    <xacro:include filename="$(find baxter_description)/urdf/electric_gripper/fingers/${r_finger}.xacro" />
+    <xacro:include filename="$(find rethink_ee_description)/urdf/electric_gripper/fingers/${r_finger}.xacro" />
     <xacro:finger_xacro gripper_side="${side}" finger_side="r" reflect="-1" finger_tip="${r_finger_tip}" finger_grasp="${r_finger_grasp}"/>
     <xacro:if value="${finger_length > tip_finger_length}">
         <xacro:property name="tip_finger_length" value="${finger_length}" scope="local"/>

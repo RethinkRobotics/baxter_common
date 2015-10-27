@@ -7,7 +7,7 @@
       <visual>
         <origin rpy="${-pi/2} ${pi} 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://baxter_description/meshes/pneumatic_grippers_w_cup.DAE"/>
+          <mesh filename="package://rethink_ee_description/meshes/pneumatic_grippers_w_cup.DAE"/>
         </geometry>
       </visual>
       <collision>
