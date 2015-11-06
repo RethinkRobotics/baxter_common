@@ -1,3 +1,4 @@
+bool ready               # true if enabled and ready to operate, e.g., not homing
 bool enabled             # true if enabled
 bool stopped             # true if stopped -- e-stop asserted
 bool error               # true if a component of the assembly has an error
