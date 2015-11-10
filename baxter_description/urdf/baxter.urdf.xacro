@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="baxter_with_gripper_base">
+  <xacro:include filename="$(find baxter_description)/urdf/baxter_base.xacro" />
+  <xacro:include filename="$(find baxter_description)/urdf/gripper_base.xacro" />
+
+  <xacro:gripper_base side="right" />
+  <xacro:gripper_base side="left" />
+</robot>

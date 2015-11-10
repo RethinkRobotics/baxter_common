@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rethink_electric_gripper">
+  <xacro:macro name="rethink_electric_gripper" params="side gripper_side">
+    <!-- Base of end effector -->
+    <link name="${side}_gripper_base">
+      <gravity>0</gravity>
+      <visual>
+        <origin rpy="-1.57079632679 3.1415 0" xyz="0.00 0.00 0.025"/>
+        <geometry>
+          <mesh filename="package://baxter_description/meshes/electric_gripper/electric_gripper_base.DAE"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0.007 0.007 0"/>
+        <geometry>
+          <cylinder length="0.1" radius="0.0275"/>
+        </geometry>
+        <material name="darkred">
+          <color rgba=".5 .1 .1 1"/>
+        </material>
+      </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
+        <mass value="0.00094542"/>
+        <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/>
+      </inertial>
+    </link>
+    <link name="${side}_gripper">
+      <gravity>0</gravity>
+      <visual>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="rblack">
+          <color rgba="0 0 0 1"/>
+        </material>
+      </visual>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
+        <mass value="0.0001"/>
+        <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
+      </inertial>
+    </link>
+
+    <!-- Finger mesh index -->
+    <!--mesh filename="package://baxter_description/meshes/electric_gripper/fingers/00017816.DAE" /--> <!--basic_hard_tip-->
+    <!--mesh filename="package://baxter_description/meshes/electric_gripper/fingers/00030515.DAE" /--> <!--extended_wide -->
+    <!--mesh filename="package://baxter_description/meshes/electric_gripper/fingers/00030516.DAE" /--> <!-- standard_wide -->
+    <!--mesh filename="package://baxter_description/meshes/electric_gripper/fingers/00030517.DAE" /--> <!-- standard_narrow -->
+    <!--mesh filename="package://baxter_description/meshes/electric_gripper/fingers/00030518.DAE" /--> <!--extended_narrow /-->
+    <!--mesh filename="package://baxter_description/meshes/electric_gripper/fingers/00030535.DAE" /--> <!-- limiter -->
+
+    <!-- Right finger -->
+    <link name="${side}_gripper_r_finger">
+      <gravity>0</gravity>
+      <visual>
+        <origin rpy="0 1.57079632679 0" xyz="0.007 -0.036 0.0135"/>
+        <geometry>
+          <mesh filename="package://baxter_description/meshes/electric_gripper/fingers/extended_narrow.DAE" /> <!-- Long left finger-->
+        </geometry>
+      </visual>
+      <collision>
+        <origin rpy="0 1.57079632679 0" xyz="0.007 -0.036 0.0135"/>
+        <geometry>
+          <mesh filename="package://baxter_description/meshes/electric_gripper/fingers/extended_narrow.DAE" /> <!-- Long left finger-->
+        </geometry>
+      </collision>
+      <inertial>
+        <origin rpy="0 1.57079632679 0" xyz="0.007 -0.036 0.0135"/>
+        <!-- <mass value="0.00094542"/> -->
+        <!-- <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/> -->
+        <mass value="0.01"/>
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+      </inertial>
+    </link>
+
+    <!-- Left finger -->
+    <link name="${side}_gripper_l_finger">
+      <gravity>0</gravity>
+      <visual>
+        <origin rpy="0 -1.57079632679 0" xyz="0.007 -0.036 -0.0135"/>
+        <geometry>
+          <mesh filename="package://baxter_description/meshes/electric_gripper/fingers/extended_narrow.DAE" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin rpy="0 -1.57079632679 0" xyz="0.007 -0.036 -0.0135"/>
+        <geometry>
+          <mesh filename="package://baxter_description/meshes/electric_gripper/fingers/extended_narrow.DAE" /> <!-- Long left finger-->
+        </geometry>
+      </collision>
+      <inertial>
+        <origin rpy="0 -1.57079632679 0" xyz="0.007 -0.036 -0.0135"/>
+        <!-- <mass value="0.00094542"/> -->
+        <!-- <inertia ixx="2e-08" ixy="0" ixz="0" iyy="3e-08" iyz="0" izz="2e-08"/> -->
+        <mass value="0.01"/>
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+      </inertial>
+    </link>
+
+
+    <!-- Base of Right end effector -->
+    <joint name="${side}_endpoint" type="fixed">
+      <origin rpy="1.57      0 0" xyz="-0.005 0.0 0.02"/>
+      <parent link="${side}_hand"/>
+      <child link="${side}_gripper"/>
+    </joint>
+
+    <!-- Right finger -->
+    <joint name="${gripper_side}_gripper_r_finger_joint" type="prismatic">
+      <origin rpy="0 0 0" xyz="0.0 0.06 -0.035"/>
+      <axis xyz="0 0 1"/>
+      <parent link="${side}_gripper"/>
+      <child link="${side}_gripper_r_finger"/>
+      <limit effort="20.0" lower="-0.0095" upper="0.0215" velocity="5.0"/> <!-- upper is open -->
+      <dynamics damping="0.7" friction="0.0"/>
+    </joint>
+
+    <!-- Left finger -->
+    <joint name="${gripper_side}_gripper_l_finger_joint" type="prismatic">
+      <origin rpy="0 0 0" xyz="0.0 0.06 0.035"/>
+      <axis xyz="0 0 1"/>
+      <parent link="${side}_gripper"/>
+      <child link="${side}_gripper_l_finger"/>
+      <limit effort="20.0" lower="-0.0215" upper="0.0095" velocity="5.0"/> <!-- mimic joint for lower is open -->
+      <dynamics damping="0.7" friction="0.0"/>
+      <mimic joint="${gripper_side}_gripper_r_finger_joint" offset="0"
+             multiplier="-1" />
+    </joint>
+
+    <transmission name="gripper_${side}1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${gripper_side}_gripper_r_finger_joint">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="gripper_${gripper_side}1_motor1">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+    <transmission name="gripper_${side}2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${gripper_side}_gripper_l_finger_joint">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="gripper_${gripper_side}1_motor2">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <gazebo reference="${gripper_side}_gripper_r_finger_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+    <gazebo reference="${gripper_side}_gripper_l_finger_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+  </xacro:macro>
+</robot>
+
+
+
