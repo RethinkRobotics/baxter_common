@@ -2,23 +2,20 @@
 <robot name="baxter" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <!-- Arguments and Defaults-->
   <xacro:arg name="gazebo" default="false"/>
-  <xacro:arg name="left_end_effector" default="true"/>
-  <xacro:arg name="right_end_effector" default="true"/>
 
   <!-- Baxter Base URDF -->
-  <xacro:include filename="$(find baxter_description)/urdf/baxter.urdf" />
+  <xacro:include filename="$(find baxter_description)/urdf/baxter_base/baxter_base.xacro" />
+  <!-- Gazebo Tags -->
   <xacro:if value="$(arg gazebo)">
       <xacro:include filename="$(find baxter_description)/urdf/gazebo/baxter.gazebo.xacro" />
   </xacro:if>
+  <!-- Baxter Pedestal -->
+  <xacro:include filename="$(find baxter_description)/urdf/pedestal/pedestal.xacro" />
 
   <!-- Left End Effector -->
-  <xacro:if value="$(arg left_end_effector)">
-    <xacro:include filename="$(find baxter_description)/urdf/left_end_effector.urdf.xacro" />
-  </xacro:if>
+  <xacro:include filename="$(find baxter_description)/urdf/left_end_effector.urdf.xacro" />
 
   <!-- Right End Effector -->
-  <xacro:if value="$(arg right_end_effector)">
-    <xacro:include filename="$(find baxter_description)/urdf/right_end_effector.urdf.xacro" />
-  </xacro:if>
+  <xacro:include filename="$(find baxter_description)/urdf/right_end_effector.urdf.xacro" />
 
 </robot>
