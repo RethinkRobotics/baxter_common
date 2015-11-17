@@ -21,5 +21,6 @@
   <author>Rethink Robotics Inc.</author>
 
   <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>rethink_ee_description</run_depend>
 
 </package>
