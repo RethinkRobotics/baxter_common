@@ -1,5 +1,10 @@
 <?xml version="1.0" ?>
-<robot name="baxter">
+<robot name="baxter" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="gazebo" default="false"/>
+  <xacro:if value="$(arg gazebo)">
+    <!-- Gazebo Tags -->
+    <xacro:include filename="$(find baxter_description)/urdf/baxter_base/baxter_base.gazebo.xacro" />
+  </xacro:if>
   <link name="base">
   </link>
   <link name="torso">
