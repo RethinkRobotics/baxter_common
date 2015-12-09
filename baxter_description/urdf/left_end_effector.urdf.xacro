@@ -1,13 +1,38 @@
 <?xml version="1.0" ?>
 <robot name="left_end_effector" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:include filename="$(find rethink_ee_description)/urdf/electric_gripper/rethink_electric_gripper.xacro" />
-  <xacro:rethink_electric_gripper side="left"
-                                  l_finger="extended_narrow"
-                                  l_finger_slot="2"
-                                  l_finger_tip="paddle_tip"
-                                  l_finger_grasp="inner"
-                                  r_finger="extended_narrow"
-                                  r_finger_slot="2"
-                                  r_finger_tip="paddle_tip"
-                                  r_finger_grasp="inner"/>
+  <xacro:property name="side" value="left" scope="local"/>
+  <xacro:arg name="end_effector_type" default="electric_gripper" scope="local"/>
+  <xacro:arg name="gazebo"            default="false" scope="local"/>
+
+  <xacro:if value="${'$(arg end_effector_type)' == 'electric_gripper'}">
+    <!-- Left Electric Gripper -->
+    <xacro:arg name="l_finger"        default="extended_narrow" scope="local"/>
+    <xacro:arg name="l_finger_slot"   default="2" scope="local"/>
+    <xacro:arg name="l_finger_tip"    default="paddle_tip" scope="local"/>
+    <xacro:arg name="l_finger_grasp"  default="inner" scope="local"/>
+    <xacro:arg name="r_finger"        default="standard_wide" scope="local"/>
+    <xacro:arg name="r_finger_slot"   default="2" scope="local"/>
+    <xacro:arg name="r_finger_tip"    default="paddle_tip" scope="local"/>
+    <xacro:arg name="r_finger_grasp"  default="inner" scope="local"/>
+    <xacro:include filename="$(find rethink_ee_description)/urdf/electric_gripper/rethink_electric_gripper.xacro"/>
+    <xacro:rethink_electric_gripper side="${side}"
+                                  l_finger="$(arg l_finger)"
+                                  l_finger_slot="$(arg l_finger_slot)"
+                                  l_finger_tip="$(arg l_finger_tip)"
+                                  l_finger_grasp="$(arg l_finger_grasp)"
+                                  r_finger="$(arg r_finger)"
+                                  r_finger_slot="$(arg r_finger_slot)"
+                                  r_finger_tip="$(arg r_finger_tip)"
+                                  r_finger_grasp="$(arg r_finger_grasp)"/>
+  </xacro:if>
+  <xacro:if value="${'$(arg end_effector_type)' == 'pneumatic_gripper'}">
+    <!-- Left Pneumatic Gripper -->
+    <xacro:include filename="$(find rethink_ee_description)/urdf/pneumatic_gripper/rethink_pneumatic_gripper.xacro"/>
+    <xacro:rethink_pneumatic_gripper side="left"/>
+  </xacro:if>
+  <xacro:if value="${'$(arg end_effector_type)' not in ['electric_gripper', 'pneumatic_gripper']}">
+    <!-- Left Null Gripper -->
+    <xacro:include filename="$(find rethink_ee_description)/urdf/null_gripper/null_gripper.xacro"/>
+    <xacro:null_gripper side="left"/>
+  </xacro:if>
 </robot>

@@ -13,9 +13,53 @@
   </xacro:include>
 
   <!-- Left End Effector -->
-  <xacro:include filename="$(find baxter_description)/urdf/left_end_effector.urdf.xacro" />
+  <!-- Gripper types: electric_gripper, pneumatic_gripper, null_gripper -->
+  <xacro:arg name="left_end_effector"         default="electric_gripper"/>
+  <!-- Thes args are only used if left_gripper is electric_gripper -->
+  <xacro:arg name="l_gripper_l_finger"        default="extended_narrow"/>
+  <xacro:arg name="l_gripper_l_finger_slot"   default="2"/>
+  <xacro:arg name="l_gripper_l_finger_tip"    default="paddle_tip"/>
+  <xacro:arg name="l_gripper_l_finger_grasp"  default="inner"/>
+  <xacro:arg name="l_gripper_r_finger"        default="standard_wide"/>
+  <xacro:arg name="l_gripper_r_finger_slot"   default="2"/>
+  <xacro:arg name="l_gripper_r_finger_tip"    default="paddle_tip"/>
+  <xacro:arg name="l_gripper_r_finger_grasp"  default="inner"/>
+  <xacro:include filename="$(find baxter_description)/urdf/left_end_effector.urdf.xacro">
+    <xacro:arg name="end_effector_type" value="$(arg left_end_effector)"/>
+    <xacro:arg name="l_finger"          value="$(arg l_gripper_l_finger)"/>
+    <xacro:arg name="l_finger_slot"     value="$(arg l_gripper_l_finger_slot)"/>
+    <xacro:arg name="l_finger_tip"      value="$(arg l_gripper_l_finger_tip)"/>
+    <xacro:arg name="l_finger_grasp"    value="$(arg l_gripper_l_finger_grasp)"/>
+    <xacro:arg name="l_finger_grasp"    value="$(arg l_gripper_r_finger)"/>
+    <xacro:arg name="r_finger_slot"     value="$(arg l_gripper_r_finger_slot)"/>
+    <xacro:arg name="r_finger_tip"      value="$(arg l_gripper_r_finger_tip)"/>
+    <xacro:arg name="r_finger_grasp"    value="$(arg l_gripper_r_finger_grasp)"/>
+    <xacro:arg name="gazebo"            value="$(arg gazebo)"/>
+  </xacro:include>
 
   <!-- Right End Effector -->
-  <xacro:include filename="$(find baxter_description)/urdf/right_end_effector.urdf.xacro" />
+  <!-- Gripper types: electric_gripper, pneumatic_gripper, null_gripper -->
+  <xacro:arg name="right_end_effector" default="electric_gripper"/>
+  <!-- Thes args are only used if right_gripper is electric_gripper -->
+  <xacro:arg name="r_gripper_l_finger"        default="extended_narrow"/>
+  <xacro:arg name="r_gripper_l_finger_slot"   default="2"/>
+  <xacro:arg name="r_gripper_l_finger_tip"    default="half_round_tip"/>
+  <xacro:arg name="r_gripper_l_finger_grasp"  default="inner"/>
+  <xacro:arg name="r_gripper_r_finger"        default="extended_narrow"/>
+  <xacro:arg name="r_gripper_r_finger_slot"   default="2"/>
+  <xacro:arg name="r_gripper_r_finger_tip"    default="half_round_tip"/>
+  <xacro:arg name="r_gripper_r_finger_grasp"  default="inner"/>
+  <xacro:include filename="$(find baxter_description)/urdf/right_end_effector.urdf.xacro">
+    <xacro:arg name="end_effector_type" value="$(arg right_end_effector)"/>
+    <xacro:arg name="l_finger"          value="$(arg r_gripper_l_finger)"/>
+    <xacro:arg name="l_finger_slot"     value="$(arg r_gripper_l_finger_slot)"/>
+    <xacro:arg name="l_finger_tip"      value="$(arg r_gripper_l_finger_tip)"/>
+    <xacro:arg name="l_finger_grasp"    value="$(arg r_gripper_l_finger_grasp)"/>
+    <xacro:arg name="l_finger_grasp"    value="$(arg r_gripper_r_finger)"/>
+    <xacro:arg name="r_finger_slot"     value="$(arg r_gripper_r_finger_slot)"/>
+    <xacro:arg name="r_finger_tip"      value="$(arg r_gripper_r_finger_tip)"/>
+    <xacro:arg name="r_finger_grasp"    value="$(arg r_gripper_r_finger_grasp)"/>
+    <xacro:arg name="gazebo"            value="$(arg gazebo)"/>
+  </xacro:include>
 
 </robot>
