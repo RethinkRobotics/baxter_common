@@ -7,14 +7,14 @@
   <link name="${side}_gripper_base">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-      <mass value="0.0"/>
+      <mass value="0.0001"/>
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
   <link name="${side}_gripper">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-      <mass value="0.0"/>
+      <mass value="0.0001"/>
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
