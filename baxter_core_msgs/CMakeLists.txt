@@ -28,13 +28,12 @@ add_message_files(DIRECTORY msg FILES
   EndpointStates.msg
   HeadPanCommand.msg
   HeadState.msg
-  ITBState.msg
-  ITBStates.msg
   JointCommand.msg
   NavigatorState.msg
   NavigatorStates.msg
   RobustControllerStatus.msg
   SEAJointState.msg
+  URDFConfiguration.msg
 )
 
 add_service_files(DIRECTORY srv FILES

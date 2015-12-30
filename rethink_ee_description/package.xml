@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package>
-  <name>baxter_common</name>
+  <name>rethink_ee_description</name>
   <version>1.2.0</version>
   <description>
-    URDF, meshes, and custom messages describing the Baxter Research
-    Robot from Rethink Robotics.
+    Description of End Effector for Robots from Rethink Robotics.
+    This package contains the URDF and meshes describing these end effectors.
   </description>
 
   <maintainer email="rsdk.support@rethinkrobotics.com">
@@ -21,14 +21,4 @@
   <author>Rethink Robotics Inc.</author>
 
   <buildtool_depend>catkin</buildtool_depend>
-
-  <run_depend>baxter_description</run_depend>
-  <run_depend>baxter_core_msgs</run_depend>
-  <run_depend>baxter_maintenance_msgs</run_depend>
-  <run_depend>rethink_ee_description</run_depend>
-
-  <export>
-    <metapackage/>
-  </export>
-
 </package>

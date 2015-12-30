@@ -1,3 +1,23 @@
+1.2.0 (2015-12-21)
+---------------------------------
+- Electric grippers are now represented in meshes and xacro, onboard the robot and in Gazebo!
+- baxter.urdf is now deprecated. Use baxter.urdf.xacro instead:
+  rosrun xacro xacro.py --inorder `rospack find baxter_description`/urdf/baxter.urdf.xacro
+- The core of baxter.urdf now lives in baxter_base/baxter_base.urdf.xacro (which gets invoked by baxter.urdf.xacro)
+- Gazebo tags were removed from baxter_base.urdf.xacro and can now be optionally included at the top level
+  baxter.urdf.xacro with an arg: `gazebo:=true`
+- Baxter's pedestal is now an optional element, which can be left off the URDF with xacro arg: `pedestal:=false`
+- Added the rethink_ee_description package, where all the Xacro and Mesh files for suction and electric grippers will live
+- Electric Grippers can be configured in any configuration possible in the physical Electric Grippers Kit
+  (by editing baxter_description/urdf/<side>_end_effector.xacro)
+- Added URDFConfiguration.msg for adding URDF Fragments to Baxter dynamically
+- The previous two points mean that you can dynamically edit your Electric Gripper configuration send it to your real Baxter!
+- In EndEffectorProperties.msg the CUSTOM_GRIPPER is renamed to PASSIVE_GRIPPER
+- In HeadPanCommand.msg, the speed_ratio is now between [0, 1.0], where it was [0, 100] before
+- In HeadState.msg, isTurning is now isPanning
+- NavigatorStates.msg now contains the lights_names, and navigator topics have been renamed to remove the ITB acronym
+- Thanks to Kei Okada (@k-okada), for kicking off this update with a Gripper-Xacro pull request
+
 1.1.1 (2015-4-15)
 ---------------------------------
 - Patch release for other baxter packages (no baxter_common changes)
