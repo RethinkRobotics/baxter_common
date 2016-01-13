@@ -11,6 +11,45 @@
     <up_axis>Z_UP</up_axis>
   </asset>
   <library_images/>
+  <library_effects>
+    <effect id="Material_001-effect">
+      <profile_COMMON>
+	<technique sid="common">
+	  <phong>
+	    <emission>
+	      <color sid="emission">0 0 0 1</color>
+	    </emission>
+	    <ambient>
+	      <color sid="ambient">0.1 0.1 0.1 1</color>
+	    </ambient>
+	    <diffuse>
+	      <color sid="diffuse">0.01304 0.01304 0.01304 1</color>
+	    </diffuse>
+	    <specular>
+	      <color sid="specular">0.5 0.5 0.5 1</color>
+	    </specular>
+	    <shininess>
+	      <float sid="shininess">50</float>
+	    </shininess>
+	    <index_of_refraction>
+	      <float sid="index_of_refraction">1</float>
+	    </index_of_refraction>
+	  </phong>
+	</technique>
+	<extra>
+	  <technique profile="GOOGLEEARTH">
+	    <double_sided>1</double_sided>
+	  </technique>
+	</extra>
+      </profile_COMMON>
+      <extra><technique profile="MAX3D"><double_sided>1</double_sided></technique></extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material_001-material" name="Material_001">
+      <instance_effect url="#Material_001-effect"/>
+    </material>
+  </library_materials>
   <library_geometries>
     <geometry id="PEDESTAL-L-mesh" name="PEDESTAL-L">
       <mesh>
@@ -37,7 +76,7 @@
         <vertices id="PEDESTAL-L-mesh-vertices">
           <input semantic="POSITION" source="#PEDESTAL-L-mesh-positions"/>
         </vertices>
-        <polylist count="204">
+        <polylist material="Material_001-material" count="204">
           <input semantic="VERTEX" source="#PEDESTAL-L-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#PEDESTAL-L-mesh-normals" offset="1"/>
           <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
