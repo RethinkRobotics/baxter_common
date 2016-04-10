@@ -3,6 +3,7 @@
 
   <xacro:arg name="gazebo" default="false"/>
   <xacro:arg name="pedestal" default="true"/>
+  <xacro:arg name="end_effectors" default="true"/>
   <!-- Baxter Base URDF -->
   <xacro:include filename="$(find baxter_description)/urdf/baxter_base/baxter_base.urdf.xacro">
     <xacro:arg name="gazebo" value="${gazebo}"/>
@@ -15,10 +16,12 @@
     </xacro:include>
   </xacro:if>
 
-  <!-- Left End Effector -->
-  <xacro:include filename="$(find baxter_description)/urdf/left_end_effector.urdf.xacro" />
+  <xacro:if value="$(arg end_effectors)">
+    <!-- Left End Effector -->
+    <xacro:include filename="$(find baxter_description)/urdf/left_end_effector.urdf.xacro" />
 
-  <!-- Right End Effector -->
-  <xacro:include filename="$(find baxter_description)/urdf/right_end_effector.urdf.xacro" />
+    <!-- Right End Effector -->
+    <xacro:include filename="$(find baxter_description)/urdf/right_end_effector.urdf.xacro" />
+  </xacro:if>
 
 </robot>
