@@ -12,6 +12,7 @@
   </maintainer>
   <license>BSD</license>
   <url type="website">http://sdk.rethinkrobotics.com</url>
+  <url type="website">http://api.rethinkrobotics.com/baxter_maintenance_msgs/html/index-msg.html</url>
   <url type="repository">
     https://github.com/RethinkRobotics/baxter_common
   </url>
