@@ -8,7 +8,7 @@
   </gazebo>
   <!-- Gazebo-Specific Link Properties -->
   <gazebo reference="torso">
-    <selfCollide>true</selfCollide>
+    <self_collide>true</self_collide>
   </gazebo>
   <gazebo reference="head_pan">
     <implicitSpringDamper>1</implicitSpringDamper>
