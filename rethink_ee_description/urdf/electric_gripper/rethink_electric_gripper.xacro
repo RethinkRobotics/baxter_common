@@ -103,11 +103,18 @@
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
+
     <gazebo reference="${gripper_side}_gripper_r_finger_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
     <gazebo reference="${gripper_side}_gripper_l_finger_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+    <gazebo reference="${gripper_side}_gripper_l_finger">
+      <self_collide>true</self_collide>
+    </gazebo>
+    <gazebo reference="${gripper_side}_gripper_r_finger">
+      <self_collide>true</self_collide>
     </gazebo>
 
   </xacro:macro>
