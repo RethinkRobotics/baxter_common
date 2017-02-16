@@ -90,6 +90,10 @@
         <distortionK3>0.0</distortionK3>
         <distortionT1>0.0</distortionT1>
         <distortionT2>0.0</distortionT2>
+        <CxPrime>0</CxPrime>
+        <Cx>0.0</Cx>
+        <Cy>0.0</Cy>
+        <focalLength>0.0</focalLength>
         <robotNamespace>/cameras</robotNamespace>
       </plugin>
     </sensor>
@@ -128,6 +132,10 @@
         <distortionK3>0.0</distortionK3>
         <distortionT1>0.0</distortionT1>
         <distortionT2>0.0</distortionT2>
+        <CxPrime>0</CxPrime>
+        <Cx>0.0</Cx>
+        <Cy>0.0</Cy>
+        <focalLength>0.0</focalLength>
         <robotNamespace>/cameras</robotNamespace>
       </plugin>
     </sensor>
@@ -166,6 +174,10 @@
         <distortionK3>0.0</distortionK3>
         <distortionT1>0.0</distortionT1>
         <distortionT2>0.0</distortionT2>
+        <CxPrime>0</CxPrime>
+        <Cx>0.0</Cx>
+        <Cy>0.0</Cy>
+        <focalLength>0.0</focalLength>
         <robotNamespace>/cameras</robotNamespace>
       </plugin>
     </sensor>
@@ -176,6 +188,7 @@
         <height>600</height>
         <width>1024</width>
         <topicName>/robot/xdisplay</topicName>
+        <robotNamespace>/robot</robotNamespace>
       </plugin>
     </visual>
   </gazebo>
@@ -208,6 +221,7 @@
         <updateRate>100.0</updateRate>
         <topicName>/robot/sonar/head_sonar/state</topicName>
         <frameName>sonar_ring</frameName>
+        <hokuyoMinIntensity>101</hokuyoMinIntensity>
       </plugin>
       <always_on>true</always_on>
       <update_rate>100.0</update_rate>
