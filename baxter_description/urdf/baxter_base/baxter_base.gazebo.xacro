@@ -11,52 +11,68 @@
     <selfCollide>true</selfCollide>
   </gazebo>
   <gazebo reference="head_pan">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_s0">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_s1">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_e0">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_e1">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_w0">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_w1">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="right_w2">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_s0">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_s1">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_e0">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_e1">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_w0">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_w1">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <gazebo reference="left_w2">
+    <selfCollide>true</selfCollide>
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <!-- Gazebo-Specific Sensor Properties -->
   <gazebo reference="head_camera">
+    <selfCollide>true</selfCollide>
     <sensor name="head_camera" type="camera">
       <update_rate>30.0</update_rate>
       <camera name="head_camera">
@@ -95,6 +111,7 @@
     </sensor>
   </gazebo>
   <gazebo reference="right_hand_camera">
+    <selfCollide>true</selfCollide>
     <sensor name="right_hand_camera" type="camera">
       <update_rate>30.0</update_rate>
       <camera name="right_hand_camera">
@@ -133,6 +150,7 @@
     </sensor>
   </gazebo>
   <gazebo reference="left_hand_camera">
+    <selfCollide>true</selfCollide>
     <sensor name="left_hand_camera" type="camera">
       <update_rate>30.0</update_rate>
       <camera name="left_hand_camera">
@@ -171,6 +189,7 @@
     </sensor>
   </gazebo>
   <gazebo reference="display">
+    <selfCollide>true</selfCollide>
     <visual>
       <plugin name="screen_video_controller" filename="libgazebo_ros_video.so">
         <height>600</height>
@@ -180,6 +199,7 @@
     </visual>
   </gazebo>
   <gazebo reference="sonar_ring">
+    <selfCollide>true</selfCollide>
     <sensor name="sonar" type="ray">
       <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
       <ray>
@@ -214,6 +234,7 @@
     </sensor>
   </gazebo>
   <gazebo reference="right_hand_range">
+    <selfCollide>true</selfCollide>
     <sensor name="ir_right" type="ray">
       <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
       <ray>
@@ -242,6 +263,7 @@
     </sensor>
   </gazebo>
   <gazebo reference="left_hand_range">
+    <selfCollide>true</selfCollide>
     <sensor name="ir_left" type="ray">
       <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
       <ray>
