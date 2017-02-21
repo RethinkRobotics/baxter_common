@@ -4,6 +4,8 @@
   <gazebo>
     <plugin name="baxter_ros_control" filename="libbaxter_gazebo_ros_control.so">
       <robotNamespace>/robot</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType> <!-- Gazebo Default -->
+      <controlPeriod>0.001</controlPeriod> <!-- Gazebo Default -->
     </plugin>
   </gazebo>
   <!-- Gazebo-Specific Link Properties -->
