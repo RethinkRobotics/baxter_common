@@ -46,3 +46,7 @@ catkin
 catkin_generated
 devel
 test_results
+
+# Files
+baxter_description/urdf/baxter.sdf
+baxter_description/urdf/baxter.urdf
