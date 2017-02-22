@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!-- send robot XML to param server -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find
+                                           baxter_description)/urdf/baxter.urdf.xacro"/>
+
+  <!-- send fake joint values -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="TRUE"/>
+  </node>
+
+  <!-- Combine joint values -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+  <!-- Show in Rviz   -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find baxter_description)/launch/baxter.rviz"/>
+
+  <!-- Fake transform from world origin to robot origin (base) -->
+  <node pkg="tf" type="static_transform_publisher" name="$(anon tf)" args="0 0 0 0 0 0 /world /base 30" />
+
+</launch>
