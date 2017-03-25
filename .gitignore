@@ -50,3 +50,5 @@ test_results
 # Files
 baxter_description/urdf/baxter.sdf
 baxter_description/urdf/baxter.urdf
+baxter_description/urdf/baxter.gv
+baxter_description/urdf/baxter.pdf
