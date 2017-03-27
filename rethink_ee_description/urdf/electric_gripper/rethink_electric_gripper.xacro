@@ -86,20 +86,20 @@
     <transmission name="gripper_${side}1">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${gripper_side}_gripper_r_finger_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <actuator name="gripper_${gripper_side}1_motor1">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
     <transmission name="gripper_${side}2">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${gripper_side}_gripper_l_finger_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <actuator name="gripper_${gripper_side}1_motor2">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
