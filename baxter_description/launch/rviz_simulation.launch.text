@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- Note: This launch file is used to test the URDF and Meshes
      PLEASE - DO NOT launch this while networked against
-     a real Sawyer robot. It will crash the onboard
+     a real Baxter robot. It will crash the onboard
      robot_state_publisher, and you will need to reboot
      your robot for it to function properly again -->
 
