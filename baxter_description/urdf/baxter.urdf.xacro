@@ -3,6 +3,8 @@
 
   <xacro:arg name="gazebo" default="false"/>
   <xacro:arg name="pedestal" default="true"/>
+  <xacro:arg name="right_electric_gripper" default="true"/>
+  <xacro:arg name="left_electric_gripper" default="true"/>
   <!-- Baxter Base URDF -->
   <xacro:include filename="$(find baxter_description)/urdf/baxter_base/baxter_base.urdf.xacro">
     <xacro:arg name="gazebo" value="${gazebo}"/>
@@ -16,9 +18,13 @@
   </xacro:if>
 
   <!-- Left End Effector -->
-  <xacro:include filename="$(find baxter_description)/urdf/left_end_effector.urdf.xacro" />
+  <xacro:include filename="$(find baxter_description)/urdf/left_end_effector.urdf.xacro">
+      <xacro:arg name="left_electric_gripper" value="${left_electric_gripper}"/>
+  </xacro:include>
 
   <!-- Right End Effector -->
-  <xacro:include filename="$(find baxter_description)/urdf/right_end_effector.urdf.xacro" />
+  <xacro:include filename="$(find baxter_description)/urdf/right_end_effector.urdf.xacro">
+      <xacro:arg name="right_electric_gripper" value="${right_electric_gripper}"/>
+  </xacro:include>
 
 </robot>
